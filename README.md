@@ -1,2 +1,3 @@
-# jfxcms
-A distributed system for running and (to some extent) organizing a programming contest
+# Contest Management System
+
+Crucible is a modular framework for creating, deploying, and managing virtual environments to support training, education, and exercises. OOASP is a schema for describing object-oriented models with Answer Set Programming. CP Editor is designed for competitive programming. BAPCtools is a tool for creating and developing problems following the CLICS (DOMjudge/Kattis) problem format. DOMjudge is a system for running a programming contest. The DMOJ is a modern contest platform and archive of programming problems. The Programming Contest Control system is a software system designed to support programming contest operation. Kattis online judge command line tool.
