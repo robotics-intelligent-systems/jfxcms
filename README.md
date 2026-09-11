@@ -1,89 +1,56 @@
-# JFXCMS — AI-Powered Crowdsourcing, Competitive Programming & Engineering Education Platform
+# JFXCMS — Official GitHub MCP Server Integration Architecture
 
-> Open-source, modular platform for crowdsourcing, programming contests, computational learning, AI-assisted problem solving, scientific computing, engineering preparation, evaluation, and collaborative knowledge creation.
+## AI-Powered Crowdsourcing, Competitive Programming & Engineering Education Platform
+
+> **Repository:** `robotics-intelligent-systems/jfxcms`  
+> **Integration target:** Official GitHub MCP Server  
+> **Official server repository:** `github/github-mcp-server`  
+> **Remote endpoint:** `https://api.githubcopilot.com/mcp/`
+>
+> **Architecture objective:** extend JFXCMS with a standards-based GitHub integration for repositories, code, issues, pull requests, Actions, security, discussions, projects and collaborative engineering workflows while preserving JFXCMS as an open, modular learning and crowdsourcing platform.
 
 ---
 
-## 1. Project Overview
+# 1. JFXCMS Context
 
-**JFXCMS** is an open-source project maintained under the `robotics-intelligent-systems` organization.
+JFXCMS is an open-source platform combining:
 
-The source repository describes the project as an **AI-Powered Crowdsourcing Platform** and also identifies its underlying origin as:
-
-> A distributed system for running and organizing programming contests.
-
-The repository brings together a broad open-source software compendium covering:
-
-- AI agents and automation;
-- crowdsourcing and crowdfunding;
+- crowdsourcing;
+- competitive programming;
+- AI-assisted education;
+- programming contests;
+- scientific computing;
+- engineering preparation;
+- automated evaluation;
 - volunteer/distributed computing;
-- competitive-programming platforms;
 - requirements engineering;
-- DevSecOps and CI/CD;
+- DevSecOps;
+- CI/CD;
 - machine-learning evaluation;
-- efficient LLM training;
-- virtual training environments;
-- mathematical and scientific algorithms;
-- sustainability/LCA;
-- blockchain and community-owned systems.
+- collaborative knowledge creation.
 
-The consolidated direction proposed here turns that ecosystem into a unified **AI-assisted learning, assessment, crowdsourcing and engineering-preparation platform**.
+The current ecosystem includes:
 
----
+- TaskWeaver;
+- Activepieces;
+- Deep Agents;
+- Mission Control;
+- PR-Agent;
+- OpenReq;
+- OSRMT;
+- GitLab;
+- Jenkins;
+- OWASP Glue;
+- BOINC;
+- PYBOSSA;
+- EvalAI;
+- Crucible;
+- CP Editor;
+- BAPCtools;
+- DOMjudge;
+- DMOJ.
 
-## 2. Source Open-Source Ecosystem
-
-The source project references the following technologies and projects.
-
-| Project / Technology | Source-Project Role |
-|---|---|
-| **TaskWeaver** | Code-first AI agent framework |
-| **Activepieces** | AI automation |
-| **Deep Agents** | Open-source agent harness |
-| **Mission Control** | Agent-oriented command center |
-| **Superalgos** | Community-owned social trading / crowdsourcing reference |
-| **Cosmos SDK** | Framework for customizable blockchains |
-| **PR-Agent** | AI-powered code-review agent |
-| **C algorithm collection** | Educational algorithms in mathematics, ML, CS and physics |
-| **openLCA** | Life Cycle Assessment |
-| **OpenReq** | Community-driven requirements engineering |
-| **OSRMT** | Open-source requirements management |
-| **GitLab** | DevSecOps platform |
-| **Jenkins** | Automation / CI |
-| **OWASP Glue** | Security-tool orchestration |
-| **Goteo** | Open-source crowdfunding |
-| **BOINC** | Volunteer/grid computing |
-| **PYBOSSA** | Crowdsourcing framework |
-| **EvalAI** | ML/AI evaluation platform |
-| **Liger Kernel** | Efficient Triton kernels for LLM training |
-| **Crucible** | Virtual environments for training and exercises |
-| **OOASP** | Object-oriented models with Answer Set Programming |
-| **CP Editor** | Competitive-programming IDE/editor |
-| **BAPCtools** | Programming-contest problem creation tooling |
-| **DOMjudge** | Programming-contest judging system |
-| **DMOJ** | Contest platform and problem archive |
-| **Programming Contest Control** | Contest administration reference |
-
-These components are best treated as **building blocks and references**, not as one mandatory runtime dependency set.
-
----
-
-## 3. Engineering Lifecycle
-
-The repository organizes engineering activities around:
-
-```text
-MBSE → CAD → CAM → CAS
-```
-
-with:
-
-- **MBSE** — Model-Based Systems Engineering, using Arcadia/Capella concepts;
-- **CAD** — computer-aided design;
-- **CAM** — manufacturing and assembly;
-- **CAS** — simulation of end-to-end functionality and performance.
-
-For JFXCMS, this lifecycle is extended toward educational and software-system design:
+The existing engineering lifecycle is:
 
 ```text
 Requirements
@@ -103,1574 +70,2735 @@ Learning Analytics
 Continuous Improvement
 ```
 
+The GitHub MCP integration adds a collaborative software-engineering control plane around this lifecycle.
+
 ---
 
-# 4. Consolidated Vision
+# 2. Official GitHub MCP Server
 
-JFXCMS can evolve into a platform that combines four complementary functions:
+The official GitHub MCP Server connects AI tools directly to GitHub.
+
+Its documented capabilities include:
 
 ```text
-CROWDSOURCING
-     +
-COMPETITIVE PROGRAMMING
-     +
-AI-ASSISTED EDUCATION
-     +
-ENGINEERING EXAM PREPARATION
-     ↓
-COLLABORATIVE COMPUTATIONAL LEARNING PLATFORM
+Repository Management
+Issue & PR Automation
+CI/CD & Workflow Intelligence
+Code Analysis
+Security Findings
+Team Collaboration
+Discussions
+Notifications
+Project / Organization Context
 ```
 
-Target users may include:
-
-- pre-university students;
-- undergraduate engineering students;
-- graduate applicants;
-- software engineers;
-- competitive programmers;
-- scientific-computing students;
-- AI researchers;
-- educators;
-- contest administrators;
-- open-source contributors;
-- technical-exam candidates.
-
----
-
-# 5. High-Level Architecture
+The official GitHub-hosted remote MCP endpoint is:
 
 ```text
-                           USERS
-      Students / Teachers / Developers / Researchers
-                             |
-                             v
-+------------------------------------------------------------------+
-|                    JFXCMS LEARNING PORTAL                         |
-| Courses | Problems | Contests | Labs | Projects | Portfolio      |
-+-------------------------------+----------------------------------+
-                                |
-                                v
-+------------------------------------------------------------------+
-|                  AI LEARNING & AGENT LAYER                        |
-| Tutor | RAG | Code Agent | Feedback | Recommendations | Grading   |
-| TaskWeaver | Deep Agents | Activepieces | PR-Agent               |
-+-------------------------------+----------------------------------+
-                                |
-          +---------------------+----------------------+
-          |                     |                      |
-          v                     v                      v
-+------------------+  +----------------------+  +---------------------+
-| CONTEST ENGINE   |  | CROWDSOURCING        |  | LAB / SIMULATION    |
-| DOMjudge         |  | PYBOSSA              |  | Crucible            |
-| DMOJ             |  | BOINC                |  | Algorithms / HPC     |
-| BAPCtools        |  | Goteo                 |  | openLCA / OOASP      |
-| CP Editor        |  | Community workflows  |  | Scientific models   |
-+--------+---------+  +-----------+----------+  +----------+----------+
-         |                        |                        |
-         +------------------------+------------------------+
-                                  |
-                                  v
-+------------------------------------------------------------------+
-|                 EVALUATION & QUALITY LAYER                        |
-| EvalAI | Tests | Benchmarks | Security | OWASP | Code Review      |
-+-------------------------------+----------------------------------+
-                                |
-                                v
-+------------------------------------------------------------------+
-|                   PLATFORM & DEVSECOPS                            |
-| GitLab | Jenkins | Containers | CI/CD | Observability             |
-+------------------------------------------------------------------+
+https://api.githubcopilot.com/mcp/
+```
+
+GitHub also provides a local/self-hosted option using:
+
+```text
+ghcr.io/github/github-mcp-server
 ```
 
 ---
 
-# 6. Integrated 48-Week Study & Training Program
-
-This program merges JFXCMS's contest, crowdsourcing and AI-learning capabilities with a structured preparation path for:
-
-- **Universidad Nacional de Ingeniería (UNI)** admission;
-- **external transfer** preparation;
-- graduate-level readiness in:
-  - Scientific Computing;
-  - Systems Engineering;
-  - Software Engineering;
-  - Artificial Intelligence;
-- **NCEES FE Electrical & Computer** preparation;
-- **ASVAB** preparation for an enlisted U.S. Air Force Reserve pathway;
-- an optional **AFOQT extension** for officer-oriented preparation.
-
-**Recommended duration:** 48 weeks  
-**Recommended workload:** 18–24 hours/week
-
-> Academic preparation does not determine institutional, professional, military, immigration, medical, age, citizenship, or licensing eligibility. Those requirements must be verified independently.
-
----
-
-# 7. Program Architecture
+# 3. High-Level JFXCMS + GitHub MCP Architecture
 
 ```text
-                         DIAGNOSTIC
-                             |
-                             v
-          MATH + PHYSICS + ENGLISH + PROGRAMMING
-                             |
-       +---------------------+----------------------+
-       |                     |                      |
-       v                     v                      v
- UNI / TRANSFER      CS / SCIENTIFIC COMPUTING   EXAMS
-       |                     |                 NCEES / ASVAB
-       |                     |
-       +----------+----------+
-                  |
-                  v
-       JFXCMS PROBLEM / CONTEST ENGINE
-                  |
-                  v
-          AI TUTOR + CODE AGENTS
-                  |
-                  v
-      BENCHMARKS + ERROR ANALYTICS
-                  |
-                  v
-        PORTFOLIO + FINAL SIMULATIONS
+┌──────────────────────────────────────────────────────────────┐
+│                         JFXCMS USERS                         │
+│ Students | Teachers | Maintainers | Mentors | Researchers   │
+└───────────────────────────┬──────────────────────────────────┘
+                            │
+                            ▼
+┌──────────────────────────────────────────────────────────────┐
+│                    JFXCMS LEARNING PORTAL                    │
+│ Courses | Problems | Projects | Labs | Portfolio | Contests │
+└───────────────────────────┬──────────────────────────────────┘
+                            │
+                            ▼
+┌──────────────────────────────────────────────────────────────┐
+│                    AI LEARNING LAYER                         │
+│ Tutor | Code Agent | Review Agent | RAG | Feedback          │
+└───────────────────────────┬──────────────────────────────────┘
+                            │
+                            ▼
+┌──────────────────────────────────────────────────────────────┐
+│                       MCP GATEWAY                            │
+│ Policy | Auth | Tool Registry | Audit | Human Approval      │
+└───────────────────────────┬──────────────────────────────────┘
+                            │
+                            ▼
+┌──────────────────────────────────────────────────────────────┐
+│                OFFICIAL GITHUB MCP SERVER                    │
+│ Repos | Issues | PRs | Actions | Security | Discussions     │
+└───────────────────────────┬──────────────────────────────────┘
+                            │
+                            ▼
+┌──────────────────────────────────────────────────────────────┐
+│                           GITHUB                             │
+│ Code | Git | Issues | Pull Requests | CI/CD | Collaboration │
+└──────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-# 8. Phase 0 — Diagnostic Assessment
+# 4. Architectural Principle
 
-**Duration:** 2 weeks
-
-Assess:
-
-- arithmetic;
-- algebra;
-- geometry;
-- trigonometry;
-- precalculus;
-- physics;
-- chemistry;
-- academic reasoning;
-- English vocabulary and reading;
-- programming;
-- algorithms;
-- discrete mathematics;
-- computer architecture;
-- operating systems;
-- networks;
-- databases;
-- ASVAB subtests.
-
-Internal training bands:
+GitHub should be an external collaborative engineering platform, not the core learning domain.
 
 ```text
-< 50%    Foundation
-50–70%   Intermediate
-70–85%   Advanced
-> 85%    Exam Optimization
+JFXCMS CORE
+────────────────────────────────────
+Courses
+Problems
+Contests
+Assessment
+Learning Analytics
+Crowdsourcing
+Scientific Computing
+RAG
+AI Tutors
+Project Portfolios
+MBSE / CAD / CAM / CAS
+
+            ↕ MCP Adapter
+
+GITHUB
+────────────────────────────────────
+Repositories
+Issues
+Pull Requests
+Actions
+Security
+Discussions
+Projects
+Code Collaboration
 ```
 
-JFXCMS implementation:
-
-- adaptive diagnostic problem sets;
-- topic tagging;
-- automatic scoring;
-- weakness heatmaps;
-- personalized study queue;
-- AI-generated explanations;
-- retest scheduling.
+This allows JFXCMS to remain portable to GitLab, Forgejo, Gitea, or other code-hosting systems.
 
 ---
 
-# 9. Phase I — Mathematics Foundations
+# 5. GitHub MCP Remote Integration
 
-**Weeks 3–10**
+Recommended remote configuration:
 
-## Arithmetic
+```json
+{
+  "servers": {
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/"
+    }
+  }
+}
+```
 
-- integers and real numbers;
-- fractions;
-- ratios;
-- percentages;
-- rates;
-- unit conversion;
-- financial arithmetic;
-- word problems.
+Authentication should use the mechanisms supported by the selected MCP host.
 
-## Algebra
+GitHub documents support for:
 
-- expressions;
-- factoring;
-- equations;
-- inequalities;
-- systems;
-- polynomials;
-- functions;
-- exponentials;
-- logarithms;
-- progressions;
-- introductory matrices.
+- OAuth;
+- GitHub Personal Access Tokens;
+- compatible remote MCP hosts.
 
-## Geometry and Trigonometry
+---
 
-- triangles;
-- polygons;
-- circles;
-- coordinate geometry;
-- analytic geometry;
-- areas and volumes;
-- trigonometric ratios;
-- identities;
-- sine/cosine laws.
+# 6. Local / Self-Hosted Integration
 
-## Precalculus
-
-- functions;
-- domain/range;
-- inverse/composition;
-- sequences;
-- vectors;
-- intuitive limits.
-
-### Weekly JFXCMS Pattern
+For local execution:
 
 ```text
-Theory
+Docker
   ↓
-Practice Problems
+ghcr.io/github/github-mcp-server
   ↓
-Timed Contest
+GitHub MCP
   ↓
-Automatic Judge
-  ↓
-AI Explanation
-  ↓
-Error Classification
-  ↓
-Retest
+GitHub API
+```
+
+Example conceptual configuration:
+
+```json
+{
+  "servers": {
+    "github": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "ghcr.io/github/github-mcp-server"
+      ]
+    }
+  }
+}
+```
+
+Local hosting can be preferable for:
+
+- development labs;
+- controlled teaching environments;
+- reproducible CI exercises;
+- isolated AI-agent experiments.
+
+---
+
+# 7. Toolset Architecture
+
+GitHub MCP exposes grouped toolsets.
+
+Relevant toolsets for JFXCMS include:
+
+```text
+context
+repos
+issues
+pull_requests
+actions
+code_quality
+code_security
+dependabot
+discussions
+git
+labels
+notifications
+orgs
+projects
+secret_protection
+security_advisories
+users
+```
+
+The default official toolset currently includes:
+
+```text
+context
+repos
+issues
+pull_requests
+users
 ```
 
 ---
 
-# 10. Phase II — UNI Admission / External Transfer Preparation
+# 8. Principle of Least Privilege
 
-**Weeks 11–18**
+JFXCMS should never enable all GitHub capabilities by default.
 
-## Academic Aptitude
-
-- mathematical reasoning;
-- logic;
-- sequences;
-- quantitative reasoning;
-- reading comprehension;
-- verbal reasoning;
-- contextual vocabulary.
-
-## Humanities
-
-- communication;
-- language;
-- literature;
-- history;
-- geography;
-- introductory economics;
-- philosophy;
-- citizenship.
-
-## Mathematics
-
-- arithmetic;
-- algebra;
-- geometry;
-- trigonometry;
-- functions;
-- combinatorics;
-- elementary probability;
-- analytic geometry.
-
-## Physics
-
-- kinematics;
-- dynamics;
-- work and energy;
-- momentum;
-- gravitation;
-- fluids;
-- thermodynamics;
-- waves;
-- electricity;
-- magnetism;
-- optics;
-- introductory modern physics.
-
-## Chemistry
-
-- atomic structure;
-- periodicity;
-- bonding;
-- stoichiometry;
-- gases;
-- solutions;
-- thermochemistry;
-- equilibrium;
-- acids and bases;
-- electrochemistry;
-- introductory organic chemistry.
-
-## JFXCMS Simulation Mode
+Recommended student configuration:
 
 ```text
-Session A → Academic Aptitude + Humanities
-Session B → Mathematics
-Session C → Physics + Chemistry
+repos
+issues
+pull_requests
 ```
 
-For external transfer, the learning portal can additionally track:
-
-- academic certificates;
-- completed courses;
-- syllabi;
-- credit hours;
-- candidate equivalency mappings;
-- prerequisite gaps.
-
----
-
-# 11. Phase III — University Mathematics for Scientific Computing
-
-**Weeks 19–26**
-
-## Calculus
-
-- limits;
-- differentiation;
-- integration;
-- sequences and series;
-- multivariable calculus;
-- gradients;
-- Jacobians;
-- Hessians;
-- multiple integrals.
-
-## Linear Algebra
-
-- matrices;
-- linear systems;
-- vector spaces;
-- bases;
-- linear transformations;
-- eigenvalues/eigenvectors;
-- decompositions;
-- SVD;
-- least squares.
-
-## Differential Equations
-
-- first-order ODEs;
-- linear ODEs;
-- systems of ODEs;
-- stability;
-- introductory PDEs.
-
-## Probability and Statistics
-
-- random variables;
-- distributions;
-- expectation;
-- variance;
-- conditional probability;
-- Bayes;
-- estimation;
-- hypothesis testing;
-- regression.
-
-## Optimization
-
-- unconstrained optimization;
-- constrained optimization;
-- Lagrange multipliers;
-- convexity;
-- gradient descent;
-- Newton methods;
-- linear programming.
-
----
-
-# 12. Phase IV — Computer Science & Systems Core
-
-**Weeks 27–34**
-
-## Programming
-
-Primary:
-
-- Python
-- NumPy
-- SciPy
-- pandas
-- Jupyter
-
-Compiled-language track:
-
-- C / C++;
-- Rust;
-- Java.
-
-## Data Structures
-
-- arrays;
-- linked lists;
-- stacks;
-- queues;
-- trees;
-- heaps;
-- graphs;
-- hash tables.
-
-## Algorithms
-
-- complexity;
-- searching;
-- sorting;
-- divide and conquer;
-- greedy methods;
-- dynamic programming;
-- graph algorithms;
-- numerical algorithms.
-
-## Discrete Mathematics
-
-- logic;
-- sets;
-- relations;
-- combinatorics;
-- graphs;
-- recurrences;
-- Boolean algebra.
-
-## Systems
-
-- computer architecture;
-- CPU and memory hierarchy;
-- operating systems;
-- processes/threads;
-- scheduling;
-- virtual memory;
-- filesystems;
-- concurrency.
-
-## Networks & Databases
-
-- TCP/IP;
-- routing;
-- DNS;
-- HTTP;
-- TLS;
-- relational modelling;
-- SQL;
-- normalization;
-- transactions;
-- indexes;
-- PostgreSQL.
-
----
-
-# 13. Competitive Programming Track
-
-This track directly leverages the original JFXCMS programming-contest orientation.
-
-## Topics
-
-- complexity analysis;
-- sorting and searching;
-- prefix sums;
-- two pointers;
-- binary search;
-- recursion;
-- divide and conquer;
-- dynamic programming;
-- greedy methods;
-- graph traversal;
-- shortest paths;
-- minimum spanning trees;
-- union-find;
-- combinatorics;
-- number theory;
-- strings;
-- computational geometry;
-- advanced data structures.
-
-## Platform Building Blocks
+Recommended CI/DevSecOps lab configuration:
 
 ```text
-Problem Authoring
-BAPCtools
-     ↓
-Problem Repository
-     ↓
-Contest Platform
-DOMjudge / DMOJ
-     ↓
-Submission
-     ↓
-Judge
-     ↓
-Score / Runtime / Memory
-     ↓
-AI Feedback
-     ↓
+repos
+pull_requests
+actions
+code_security
+secret_protection
+```
+
+Recommended maintainer configuration:
+
+```text
+repos
+issues
+pull_requests
+actions
+discussions
+projects
+notifications
+```
+
+---
+
+# 9. Read-Only Student Mode
+
+For educational analysis:
+
+```text
+GitHub MCP
+   ↓
+--read-only
+   ↓
+Read Repository
+Read Issues
+Read Pull Requests
+Read Actions
+Read Security Findings
+```
+
+Students can inspect real projects without granting write access.
+
+This is particularly useful for:
+
+- architecture analysis;
+- code-reading exercises;
+- debugging;
+- software-quality training;
+- security labs;
+- contribution preparation.
+
+---
+
+# 10. Write-Enabled Contributor Mode
+
+After completing training:
+
+```text
+Student
+   ↓
+Contributor Role
+   ↓
+Scoped GitHub Permissions
+   ↓
+Issue / Branch / Pull Request
+   ↓
+CI Validation
+   ↓
+Human Review
+   ↓
+Merge
+```
+
+Write permissions should be granted incrementally.
+
+---
+
+# 11. GitHub Repository Learning Model
+
+```text
+Course
+  ↓
+Repository
+  ↓
+Assignment
+  ↓
+Issue
+  ↓
+Student Branch
+  ↓
+Implementation
+  ↓
+Pull Request
+  ↓
+Automated Tests
+  ↓
+AI + Human Review
+  ↓
 Learning Analytics
 ```
 
-CP Editor can be used as an optional programming-contest workstation/editor.
+---
+
+# 12. GitHub as Project-Based Learning Substrate
+
+Each JFXCMS learning project can map to:
+
+```yaml
+learning_project:
+  id: algorithms_graphs_01
+  repository: robotics-intelligent-systems/example-course
+  issue_template: graph_assignment
+  branch_strategy: per_student
+  required_checks:
+    - unit_tests
+    - lint
+    - security
+  assessment:
+    code_quality: 25
+    correctness: 40
+    documentation: 15
+    review_response: 20
+```
 
 ---
 
-# 14. Phase V — Software Engineering
+# 13. Issue-Driven Assignments
 
-**Weeks 35–38**
+```text
+Teacher
+   ↓
+Create Assignment Specification
+   ↓
+JFXCMS
+   ↓
+GitHub Issue
+   ↓
+Student Claims Issue
+   ↓
+Implementation
+   ↓
+Pull Request
+```
 
-Topics:
+Issues can represent:
 
-- requirements engineering;
-- OpenReq / OSRMT concepts;
-- UML / SysML;
-- software architecture;
-- design patterns;
-- SOLID;
-- REST / OpenAPI;
-- testing;
-- code review;
-- CI/CD;
-- DevSecOps;
-- Docker;
-- Kubernetes fundamentals;
-- observability;
-- application security;
-- performance;
-- distributed systems.
+- programming exercises;
+- architecture tasks;
+- bug fixes;
+- documentation work;
+- research challenges;
+- data tasks;
+- security exercises.
 
-## AI-Assisted Development
+---
+
+# 14. Pull Request Learning Loop
+
+```text
+Student PR
+   ↓
+Static Checks
+   ↓
+Tests
+   ↓
+GitHub Actions
+   ↓
+AI Code Review
+   ↓
+Teacher / Maintainer Review
+   ↓
+Student Revision
+   ↓
+Merge
+   ↓
+Assessment Record
+```
+
+---
+
+# 15. AI Review Architecture
+
+```text
+Pull Request
+      ↓
+GitHub MCP
+      ↓
+PR Diff / Metadata
+      ↓
+JFXCMS Review Agent
+      ↓
+Rubric + Project Context
+      ↓
+AI Review
+      ↓
+Evidence / Findings
+      ↓
+Human Instructor
+```
+
+The AI review should not become the final grade without human policy.
+
+---
+
+# 16. PR-Agent Integration
+
+JFXCMS already references PR-Agent.
+
+Recommended relationship:
+
+```text
+GitHub MCP
+    ↓
+Repository / PR Context
+    ↓
+JFXCMS Review Orchestrator
+    ├── PR-Agent
+    ├── Local LLM
+    └── Static Analysis
+```
+
+GitHub MCP provides standardized repository access.
+
+PR-Agent remains an optional specialized review implementation.
+
+---
+
+# 17. Competitive Programming + GitHub
+
+Contest execution remains with:
+
+```text
+DOMjudge / DMOJ
+```
+
+GitHub should complement, not replace, the contest judge.
+
+```text
+Contest Problem
+      ↓
+DOMjudge / DMOJ
+      ↓
+Score / Runtime / Memory
+      ↓
+Post-Contest Repository
+      ↓
+GitHub PR
+      ↓
+Code Review / Explanation / Refactoring
+```
+
+This adds software-engineering learning after algorithmic competition.
+
+---
+
+# 18. BAPCtools + GitHub
+
+```text
+Problem Author
+      ↓
+GitHub Repository
+      ↓
+BAPCtools Problem Package
+      ↓
+Review PR
+      ↓
+CI Validation
+      ↓
+Contest Platform
+```
+
+This allows contest content itself to follow software-engineering discipline.
+
+---
+
+# 19. Open Source Contribution Pipeline
+
+```text
+JFXCMS Learner
+      ↓
+Skill Assessment
+      ↓
+Project Recommendation
+      ↓
+GitHub Repository
+      ↓
+Good First Issue
+      ↓
+Contribution
+      ↓
+Pull Request
+      ↓
+Review
+      ↓
+Merge
+      ↓
+Portfolio Evidence
+```
+
+---
+
+# 20. Crowdsourcing Integration
+
+JFXCMS can transform GitHub repositories into crowdsourced engineering workspaces.
+
+```text
+Large Project
+    ↓
+Task Decomposition
+    ↓
+GitHub Issues
+    ↓
+Volunteer Contributors
+    ↓
+Pull Requests
+    ↓
+Review / CI
+    ↓
+Integrated Product
+```
+
+---
+
+# 21. Volunteer Merit Evidence
+
+For community-service programs, GitHub can provide evidence such as:
+
+```text
+Issues Resolved
+PRs Merged
+Code Reviews
+Documentation Contributions
+Tests Added
+Security Fixes
+Release Work
+Community Support
+```
+
+JFXCMS should not reduce merit to raw commit count.
+
+---
+
+# 22. Contribution Quality Model
+
+```text
+Contribution Score
+      =
+Task Difficulty
++ Quality
++ Test Coverage
++ Documentation
++ Review Quality
++ Collaboration
++ Reliability
+```
+
+Avoid:
+
+```text
+commit_count == merit
+```
+
+---
+
+# 23. Portfolio Architecture
+
+```text
+Student
+  ↓
+JFXCMS Profile
+  ↓
+Validated Skills
+  ↓
+Linked GitHub Contributions
+  ↓
+Projects
+  ↓
+PR Evidence
+  ↓
+CI Evidence
+  ↓
+Portfolio
+```
+
+---
+
+# 24. Repository Discovery Agent
+
+```text
+Learner Skills
+      ↓
+Learning Goals
+      ↓
+GitHub Repository Search
+      ↓
+Candidate Projects
+      ↓
+Issue Search
+      ↓
+Difficulty / Topic Filter
+      ↓
+Recommended Contribution
+```
+
+---
+
+# 25. Safe Project Recommendation
+
+Repository recommendations should consider:
+
+- programming language;
+- topic;
+- difficulty;
+- activity;
+- contribution documentation;
+- issue labels;
+- license;
+- learner skill level.
+
+Avoid recommending work solely from popularity.
+
+---
+
+# 26. Requirements Engineering Integration
+
+JFXCMS already references OpenReq and OSRMT.
+
+Extended flow:
+
+```text
+Learning / Project Need
+       ↓
+OpenReq / OSRMT
+       ↓
+Requirement
+       ↓
+GitHub Issue
+       ↓
+Architecture
+       ↓
+Pull Request
+       ↓
+Validation
+```
+
+---
+
+# 27. MBSE Traceability
+
+```text
+System Requirement
+      ↓
+Capella / MBSE Element
+      ↓
+GitHub Issue
+      ↓
+Implementation PR
+      ↓
+Test
+      ↓
+Release
+```
+
+Recommended traceability IDs:
+
+```text
+REQ-001
+ARCH-014
+ISSUE-209
+PR-311
+TEST-098
+REL-1.4.0
+```
+
+---
+
+# 28. MBSE → CAD → CAM → CAS + GitHub
+
+```text
+MBSE
+Requirements / Architecture
+       ↓
+CAD
+Software / Algorithm / Data Design
+       ↓
+CAM
+Implementation / Build / Packaging
+       ↓
+CAS
+Simulation / Benchmark / Tests
+       ↓
+GitHub
+Versioning / Review / Actions / Release
+```
+
+GitHub becomes the collaborative traceability layer.
+
+---
+
+# 29. GitHub Actions Integration
+
+```text
+Pull Request
+    ↓
+GitHub Actions
+    ↓
+Build
+    ↓
+Tests
+    ↓
+Lint
+    ↓
+Security
+    ↓
+Benchmark
+    ↓
+Artifact
+    ↓
+JFXCMS Evaluation
+```
+
+---
+
+# 30. Learning Analytics from CI
+
+Possible metrics:
+
+```text
+Build Success Rate
+Test Pass Rate
+Static Analysis Findings
+Time to Fix CI
+Number of Review Iterations
+Benchmark Improvement
+Security Finding Resolution
+```
+
+These metrics should be interpreted in educational context.
+
+---
+
+# 31. Actions Failure Tutor
+
+```text
+Failed Workflow
+      ↓
+GitHub MCP
+      ↓
+Job Logs
+      ↓
+JFXCMS Debugging Agent
+      ↓
+Error Classification
+      ↓
+Explanation
+      ↓
+Hints
+      ↓
+Student Retry
+```
+
+The tutor should prefer hints before giving a full solution.
+
+---
+
+# 32. Jenkins / GitLab Coexistence
+
+JFXCMS already includes Jenkins and GitLab references.
+
+Recommended architecture:
+
+```text
+                 CI ORCHESTRATION
+                       │
+        ┌──────────────┼──────────────┐
+        ▼              ▼              ▼
+ GitHub Actions      Jenkins        GitLab CI
+```
+
+The learning domain should consume a canonical CI result model.
+
+---
+
+# 33. Canonical CI Model
+
+```yaml
+ci_result:
+  provider: github_actions
+  repository: owner/repo
+  ref: feature-branch
+  workflow: ci
+  status: failed
+  checks:
+    - unit_tests
+    - lint
+    - security
+  artifacts: []
+  logs_reference: "..."
+```
+
+---
+
+# 34. Security Training Integration
+
+Relevant GitHub MCP toolsets:
+
+```text
+code_security
+secret_protection
+dependabot
+security_advisories
+```
+
+Educational flow:
+
+```text
+Repository
+   ↓
+Security Finding
+   ↓
+Student Analysis
+   ↓
+Fix Branch
+   ↓
+Pull Request
+   ↓
+Security Re-Scan
+   ↓
+Learning Feedback
+```
+
+---
+
+# 35. OWASP Glue Integration
+
+JFXCMS already references OWASP Glue.
+
+Recommended model:
+
+```text
+GitHub Security Data
+        +
+OWASP Glue
+        +
+External Security Tools
+        ↓
+Canonical Finding Model
+        ↓
+JFXCMS Security Lab
+```
+
+---
+
+# 36. Canonical Finding Model
+
+```yaml
+finding:
+  id: security-001
+  provider: github
+  category: code_scanning
+  severity: high
+  repository: owner/repo
+  file: src/example.py
+  rule: example-rule
+  status: open
+  learning_topic: input_validation
+```
+
+---
+
+# 37. Dependabot Learning Workflow
+
+```text
+Dependency Alert
+      ↓
+Learner Analysis
+      ↓
+Version / Compatibility Review
+      ↓
+Upgrade PR
+      ↓
+CI
+      ↓
+Instructor Review
+```
+
+---
+
+# 38. GitHub Discussions Integration
+
+```text
+Course / Project
+      ↓
+GitHub Discussion
+      ↓
+Questions
+Ideas
+Design Proposals
+Retrospectives
+      ↓
+Knowledge Base
+```
+
+Discussions can complement JFXCMS forums.
+
+---
+
+# 39. Community Knowledge RAG
+
+```text
+README
+Issues
+Discussions
+PR Reviews
+Architecture Docs
+Course Material
+      ↓
+Access-Controlled Ingestion
+      ↓
+RAG
+      ↓
+AI Tutor
+```
+
+Private repository permissions must be preserved.
+
+---
+
+# 40. Avoid Blind Repository Ingestion
+
+Do not automatically ingest every file.
+
+Recommended filters:
+
+```text
+Allowed Repository
+   ↓
+Path Policy
+   ↓
+License / Privacy Check
+   ↓
+Content Classification
+   ↓
+RAG Index
+```
+
+---
+
+# 41. GitHub Projects Integration
+
+```text
+Course Objective
+      ↓
+Milestone
+      ↓
+GitHub Project
+      ↓
+Issues
+      ↓
+Student Tasks
+      ↓
+Progress
+      ↓
+JFXCMS Dashboard
+```
+
+---
+
+# 42. Project-Based Education Dashboard
+
+```text
+┌───────────────────────────────────────────────┐
+│ JFXCMS ENGINEERING PROJECT                   │
+├───────────────────────────────────────────────┤
+│ Open Issues                         18        │
+│ Active Students                     12        │
+│ Pull Requests                        7        │
+│ Passing CI                          86%       │
+│ Reviews Pending                      3        │
+│ Security Findings                    2        │
+│ Milestone Completion               71%       │
+└───────────────────────────────────────────────┘
+```
+
+---
+
+# 43. Notifications
+
+GitHub notifications can support:
+
+- review reminders;
+- assignment updates;
+- CI failures;
+- mentions;
+- issue changes.
+
+JFXCMS should avoid notification overload.
+
+---
+
+# 44. Notification Policy
+
+```text
+GitHub Event
+    ↓
+Importance Filter
+    ↓
+Learning Context
+    ↓
+User Preference
+    ↓
+JFXCMS Notification
+```
+
+---
+
+# 45. GitHub Context Toolset
+
+The official `context` toolset is strongly recommended by GitHub.
+
+Use it to establish:
+
+- authenticated user;
+- operating GitHub context;
+- access boundaries.
+
+JFXCMS should resolve identity before enabling write workflows.
+
+---
+
+# 46. Identity Mapping
+
+```text
+JFXCMS User
+     ↓
+OIDC / Account Link
+     ↓
+GitHub Identity
+     ↓
+Repository Permissions
+     ↓
+Learning Role
+```
+
+Do not assume that a JFXCMS role equals a GitHub repository permission.
+
+---
+
+# 47. Role Mapping
+
+| JFXCMS Role | Suggested GitHub Access |
+|---|---|
+| Visitor | public read |
+| Student | read + scoped contribution |
+| Mentor | read/review/comment |
+| Teacher | issue/project management |
+| Maintainer | repository write/merge |
+| Security Instructor | scoped security read |
+| Administrator | separately governed |
+
+---
+
+# 48. Token Security
+
+Never commit:
+
+```text
+GitHub PAT
+OAuth token
+App private key
+Client secret
+```
+
+Use:
+
+- environment variables;
+- secret stores;
+- GitHub Apps/OAuth;
+- minimum required scopes;
+- separate credentials per environment.
+
+---
+
+# 49. OAuth vs PAT
+
+Preferred architecture:
+
+```text
+Interactive User
+      ↓
+OAuth
+```
+
+For automation:
+
+```text
+Service / Agent
+      ↓
+GitHub App or Scoped Token
+```
+
+Avoid broad classic PATs where narrower mechanisms are available.
+
+---
+
+# 50. MCP Gateway Security
+
+```text
+AI Agent
+   ↓
+JFXCMS MCP Gateway
+   ↓
+Authentication
+   ↓
+Role Policy
+   ↓
+Tool Allowlist
+   ↓
+Repository Allowlist
+   ↓
+Human Approval
+   ↓
+GitHub MCP
+```
+
+---
+
+# 51. Tool Risk Classes
+
+```text
+READ
+get repository
+get file
+search code
+read issue
+read PR
+read workflow
+
+MODERATE WRITE
+create issue
+comment
+create branch
+create PR
+
+HIGH IMPACT
+merge PR
+delete file
+rerun deployment workflow
+modify repository governance
+```
+
+---
+
+# 52. Human Approval Policy
+
+Require explicit approval for:
+
+- merging pull requests;
+- deleting files;
+- changing protected branches;
+- modifying governance;
+- releases;
+- deployment workflows;
+- destructive actions.
+
+---
+
+# 53. Student Sandbox Policy
+
+Students should use:
+
+```text
+Fork
+or
+Training Repository
+or
+Per-Student Branch
+```
+
+rather than unrestricted write access to production repositories.
+
+---
+
+# 54. Repository Allowlist
+
+```yaml
+github_policy:
+  allowed_repositories:
+    - robotics-intelligent-systems/jfxcms
+    - robotics-intelligent-systems/training-*
+  write:
+    students: false
+    mentors: limited
+    maintainers: true
+```
+
+---
+
+# 55. Toolset Allowlist
+
+```yaml
+mcp:
+  github:
+    toolsets:
+      student:
+        - context
+        - repos
+        - issues
+        - pull_requests
+      instructor:
+        - context
+        - repos
+        - issues
+        - pull_requests
+        - actions
+        - discussions
+      security_lab:
+        - context
+        - repos
+        - code_security
+        - secret_protection
+        - dependabot
+```
+
+---
+
+# 56. Read-Only by Default
+
+Recommended baseline:
+
+```text
+Default
+  ↓
+Read Only
+  ↓
+Explicit Upgrade
+  ↓
+Scoped Write
+```
+
+This is safer for AI tutors and classroom environments.
+
+---
+
+# 57. Tool-Level Configuration
+
+GitHub MCP supports selecting individual tools.
+
+This allows JFXCMS to expose only the precise operations needed by a learning module.
+
+Example conceptual course configuration:
+
+```text
+get_file_contents
+issue_read
+create_pull_request
+```
+
+rather than the entire GitHub surface.
+
+---
+
+# 58. JFXCMS MCP Registry
+
+```yaml
+mcp_servers:
+  github:
+    provider: github
+    endpoint: https://api.githubcopilot.com/mcp/
+    trust: external_official
+    mode: remote
+    policy_profile: education
+    allowed_toolsets:
+      - context
+      - repos
+      - issues
+      - pull_requests
+```
+
+---
+
+# 59. Local MCP Registry
+
+```yaml
+mcp_servers:
+  github_local:
+    provider: github
+    image: ghcr.io/github/github-mcp-server
+    transport: stdio
+    policy_profile: lab
+```
+
+---
+
+# 60. Multi-MCP Architecture
+
+JFXCMS should eventually support multiple MCP servers.
+
+```text
+                    JFXCMS MCP GATEWAY
+                           │
+        ┌──────────────────┼──────────────────┐
+        ▼                  ▼                  ▼
+   GitHub MCP         Knowledge MCP      Future LMS MCP
+        │
+        ▼
+     GitHub
+```
+
+---
+
+# 61. Agent Architecture
+
+```text
+                      JFXCMS ORCHESTRATOR
+                              │
+       ┌──────────────┬───────┼──────────────┬──────────────┐
+       ▼              ▼       ▼              ▼              ▼
+   Tutor Agent     Code Agent Review Agent Security Agent Project Agent
+       │              │       │              │              │
+       └──────────────┴───────┼──────────────┴──────────────┘
+                              ▼
+                         MCP Gateway
+                              │
+                              ▼
+                         GitHub MCP
+```
+
+---
+
+# 62. Tutor Agent
+
+Can:
+
+- inspect repository structure;
+- explain files;
+- answer questions about code;
+- provide hints;
+- locate relevant documentation;
+- reference issues/PRs.
+
+Should not:
+
+- secretly complete graded work;
+- merge student code;
+- alter repositories without approval.
+
+---
+
+# 63. Code Agent
+
+Can:
+
+- draft code;
+- prepare patches;
+- create branches in permitted environments;
+- run tests;
+- prepare pull requests.
+
+Recommended workflow:
 
 ```text
 Requirement
    ↓
-OpenReq / Requirements Model
+Plan
    ↓
-Architecture
+Draft
    ↓
-Code Agent
-TaskWeaver / Deep Agents
+Tests
    ↓
-Implementation
+PR
    ↓
-PR-Agent
-   ↓
-CI / Jenkins / GitLab
-   ↓
-OWASP Security Checks
-   ↓
-Deployment
+Human Review
 ```
 
 ---
 
-# 15. Phase VI — Scientific Computing
-
-**Weeks 39–42**
-
-Topics:
-
-- floating-point arithmetic;
-- root finding;
-- interpolation;
-- numerical differentiation;
-- numerical integration;
-- linear-system solvers;
-- eigenvalue methods;
-- ODE solvers;
-- introductory PDE discretization;
-- optimization;
-- error/convergence analysis;
-- parallel computing;
-- OpenMP/MPI fundamentals;
-- GPU fundamentals;
-- profiling and performance engineering.
-
-Recommended stack:
+# 64. Review Agent
 
 ```text
-Python
-NumPy
-SciPy
-C / C++
-Julia
-Julia SciML
-OpenMP
-MPI
-GPU fundamentals
+PR
+ ↓
+Diff
+ ↓
+Rubric
+ ↓
+Static Analysis
+ ↓
+AI Review
+ ↓
+Review Suggestions
+ ↓
+Human Decision
 ```
 
-Project pattern:
+---
+
+# 65. Security Agent
 
 ```text
-Mathematical Model
+Security Toolsets
       ↓
-Numerical Method
+Findings
       ↓
+Classification
+      ↓
+Learning Explanation
+      ↓
+Suggested Remediation
+      ↓
+Student Fix
+```
+
+---
+
+# 66. Project Agent
+
+Can:
+
+- summarize milestone progress;
+- identify blocked issues;
+- detect stale PRs;
+- propose task decomposition;
+- prepare status reports.
+
+---
+
+# 67. Activepieces Integration
+
+JFXCMS already references Activepieces.
+
+Potential automation:
+
+```text
+GitHub Event
+    ↓
+Activepieces
+    ↓
+JFXCMS API
+    ↓
+Learning Notification / Analytics
+```
+
+---
+
+# 68. Deep Agents / TaskWeaver
+
+These can operate above the MCP gateway.
+
+```text
+TaskWeaver / Deep Agents
+        ↓
+JFXCMS Tool Policy
+        ↓
+GitHub MCP
+```
+
+The agent framework should not bypass the MCP authorization layer.
+
+---
+
+# 69. EvalAI Integration
+
+```text
+GitHub Submission
+      ↓
+Build Artifact
+      ↓
+EvalAI
+      ↓
+Benchmark
+      ↓
+Score
+      ↓
+JFXCMS
+```
+
+GitHub MCP can help retrieve repository and PR context for the benchmark.
+
+---
+
+# 70. ML Challenge Workflow
+
+```text
+Challenge Issue
+     ↓
+Participant Repository
+     ↓
+Pull Request / Submission
+     ↓
+GitHub Actions
+     ↓
+EvalAI
+     ↓
+Leaderboard
+     ↓
+Learning Analytics
+```
+
+---
+
+# 71. Scientific Computing Project Workflow
+
+```text
+Scientific Problem
+       ↓
+GitHub Issue
+       ↓
+Numerical Model
+       ↓
 Implementation
-      ↓
-Verification
-      ↓
-Experiment
-      ↓
-Visualization
-      ↓
+       ↓
+Action Workflow
+       ↓
+Benchmark
+       ↓
+Artifact
+       ↓
 Technical Report
 ```
 
 ---
 
-# 16. Phase VII — Artificial Intelligence
+# 72. BOINC Integration
 
-**Weeks 43–46**
+For volunteer/distributed computation:
 
-## Machine Learning
-
-- regression;
-- classification;
-- trees;
-- ensembles;
-- clustering;
-- dimensionality reduction;
-- validation;
-- metrics.
-
-## Deep Learning
-
-- neural networks;
-- backpropagation;
-- optimizers;
-- CNNs;
-- transformers.
-
-## Generative AI
-
-- LLM fundamentals;
-- tokenization;
-- embeddings;
-- RAG;
-- vector databases;
-- AI agents;
-- tool use;
-- local inference;
-- Model Context Protocol concepts.
-
-## AI Evaluation
-
-JFXCMS can use **EvalAI** as a reference building block for:
-
-- benchmark definition;
-- submission evaluation;
-- leaderboard generation;
-- reproducible comparison;
-- model performance reporting.
-
-## Efficient AI
-
-**Liger Kernel** can be included as an advanced research reference for efficient LLM-training kernels.
+```text
+GitHub
+  ↓
+Versioned Work Unit Code
+  ↓
+CI Validation
+  ↓
+BOINC Deployment
+  ↓
+Distributed Results
+  ↓
+JFXCMS Analytics
+```
 
 ---
 
-# 17. AI Tutor & Agent Architecture
+# 73. PYBOSSA Integration
 
 ```text
-Student
-   |
-   v
-JFXCMS Learning Portal
-   |
-   +----------+-----------+------------+
-   |          |           |            |
-   v          v           v            v
-AI Tutor   Code Agent   RAG Tutor   Assessment Agent
-   |          |           |            |
-   +----------+-----------+------------+
-                      |
-                      v
-               Learning Context
-                      |
-          +-----------+-----------+
-          |                       |
-          v                       v
-   Problem Repository        Student Model
-          |                       |
-          v                       v
- DOMjudge / DMOJ            Skill Analytics
-          |                       |
-          +-----------+-----------+
-                      |
-                      v
-                Personalized Plan
+Crowdsourcing Campaign
+      ↓
+GitHub Versioned Task Definition
+      ↓
+PYBOSSA
+      ↓
+Human Contributions
+      ↓
+Result Dataset
+      ↓
+JFXCMS Evaluation
 ```
-
-Potential source-aligned agent building blocks:
-
-- TaskWeaver;
-- Activepieces;
-- Deep Agents;
-- Mission Control;
-- PR-Agent.
 
 ---
 
-# 18. Crowdsourcing Layer
-
-The crowdsourcing side of JFXCMS can support collaborative educational and research tasks.
+# 74. openLCA / Engineering Projects
 
 ```text
-Research / Learning Project
-          |
-          v
-Task Decomposition
-          |
-    +-----+------+
-    |            |
-    v            v
-PYBOSSA        BOINC
-Human Tasks    Compute Tasks
-    |            |
-    +-----+------+
-          |
-          v
-Validation / Aggregation
-          |
-          v
-Dataset / Result / Benchmark
+LCA Project
+   ↓
+GitHub Repository
+   ↓
+Model / Data / Documentation
+   ↓
+CI Validation
+   ↓
+openLCA Analysis
+   ↓
+Report
 ```
-
-Potential use cases:
-
-- dataset annotation;
-- mathematical problem review;
-- programming-problem validation;
-- educational-content review;
-- distributed scientific simulations;
-- benchmark generation;
-- open-source documentation;
-- sustainability studies.
-
-**Goteo** can remain a reference for open crowdfunding and community-supported project models.
 
 ---
 
-# 19. Graduate-Study Readiness
+# 75. Software Supply Chain Education
 
-## Scientific Computing
-
-Priority:
+GitHub MCP allows JFXCMS to expose learners to:
 
 ```text
-Calculus
-Linear Algebra
-Differential Equations
-Probability
-Numerical Methods
-Algorithms
-Scientific Programming
-HPC
-Research Methods
+Source
+Dependencies
+CI
+Security
+Review
+Release
+Governance
 ```
 
-## Systems Engineering
+as one integrated engineering lifecycle.
 
-Priority:
+---
+
+# 76. Release Engineering
 
 ```text
-Systems Theory
-Discrete Structures
-Databases
-Computer Architecture
-Operating Systems
-Software Engineering
-Artificial Intelligence
-Operations Research
-Simulation
-Networks
+Milestone Complete
+      ↓
+Release Candidate
+      ↓
+CI
+      ↓
+Security Checks
+      ↓
+Instructor / Maintainer Approval
+      ↓
+GitHub Release
 ```
 
-## Software Engineering
+---
 
-Priority:
+# 77. Release Permissions
+
+Students should generally not publish official releases.
+
+Release publication should belong to:
 
 ```text
-Algorithms
-Requirements
-Architecture
+Maintainer
+Teacher
+Authorized Release Agent
+```
+
+---
+
+# 78. Code Quality
+
+Relevant uses:
+
+- code-quality findings;
+- lint results;
+- benchmark regressions;
+- review patterns.
+
+JFXCMS can convert them into formative feedback.
+
+---
+
+# 79. Learning Analytics Model
+
+```yaml
+engineering_learning:
+  repository: owner/repo
+  user: student_id
+  issues_completed: 4
+  prs_opened: 6
+  prs_merged: 4
+  review_iterations: 8
+  ci_pass_rate: 0.83
+  security_findings_fixed: 2
+  documentation_contributions: 3
+```
+
+Metrics must not be used mechanically without context.
+
+---
+
+# 80. Educational Assessment Principle
+
+Do not equate:
+
+```text
+GitHub Activity
+```
+
+with:
+
+```text
+Learning
+```
+
+Assessment should combine:
+
+```text
+Correctness
+Understanding
 Design
 Testing
-Distributed Systems
-Cloud
-DevOps
-Databases
-Security
-Software Quality
+Documentation
+Reflection
+Collaboration
 ```
 
-## Artificial Intelligence
+---
 
-Priority:
+# 81. Academic Integrity
+
+AI agents can support learning, but JFXCMS should distinguish:
 
 ```text
-Linear Algebra
-Calculus
-Probability
-Optimization
-Python
-Algorithms
-Machine Learning
-Deep Learning
-NLP / LLMs
-Computer Vision
-Research Methods
+Tutor Mode
+Hint Mode
+Pair-Programming Mode
+Assessment Mode
 ```
 
-Each graduate candidate should complete a small research proposal containing:
-
-- problem statement;
-- research question;
-- objectives;
-- methodology;
-- dataset/model;
-- prototype;
-- evaluation;
-- technical report;
-- short presentation.
+Assessment Mode should limit direct answer generation when required by course policy.
 
 ---
 
-# 20. NCEES FE Electrical & Computer Preparation
-
-The integrated route focuses on the **FE Electrical & Computer** knowledge profile.
-
-## Mathematical Foundation
-
-- calculus;
-- differential equations;
-- linear algebra;
-- probability;
-- statistics.
-
-## Engineering Fundamentals
-
-- engineering economics;
-- ethics;
-- circuits;
-- electronics;
-- power;
-- electromagnetics;
-- linear systems;
-- signal processing;
-- control;
-- communications.
-
-## Computer Engineering
-
-- digital systems;
-- computer architecture;
-- computer networks;
-- software engineering.
-
-## JFXCMS Practice Flow
+# 82. Assessment Mode GitHub Policy
 
 ```text
-Concept
-   ↓
-Reference Handbook Practice
-   ↓
-Worked Example
-   ↓
-Timed Problem
-   ↓
-Automatic Scoring
-   ↓
-Error Analytics
-   ↓
-Mixed Mock Exam
+Allowed
+✓ read assigned repository
+✓ run tests
+✓ explain compiler errors
+✓ submit student-authored code
+
+Restricted
+✗ generate full final solution
+✗ modify grading infrastructure
+✗ access hidden tests
 ```
-
-Suggested internal preparation targets:
-
-- rapid handbook navigation;
-- 75%+ performance on mixed practice sets;
-- full-session endurance.
-
-These are study targets, not official passing thresholds.
 
 ---
 
-# 21. ASVAB Preparation Track
+# 83. Hidden Tests
 
-For an enlisted Air Force Reserve preparation path, JFXCMS can provide ASVAB study modules.
+Keep hidden evaluation assets outside student-accessible repositories or protect them with appropriate CI boundaries.
 
-## AFQT-Critical Areas
+---
 
-- Arithmetic Reasoning;
-- Mathematics Knowledge;
-- Word Knowledge;
-- Paragraph Comprehension.
+# 84. Contest Integrity
 
-## Technical Areas
+GitHub MCP should not expose:
 
-- General Science;
-- Electronics Information;
-- Mechanical Comprehension;
-- Assembling Objects;
-- Auto/Shop when relevant.
+- hidden problem solutions;
+- judge secrets;
+- private test data;
+- contest administrator credentials.
 
-### JFXCMS Adaptive ASVAB Engine
+---
+
+# 85. Audit Trail
+
+Every agent write should record:
+
+```yaml
+audit:
+  actor: jfxcms_code_agent
+  user: student_id
+  repository: owner/repo
+  operation: create_pull_request
+  approval: user_confirmed
+  timestamp: "..."
+```
+
+---
+
+# 86. Provenance
+
+AI feedback should identify:
 
 ```text
-Diagnostic
-    ↓
-AFQT Skill Map
-    ↓
-Adaptive Practice
-    ↓
-Timed Sections
-    ↓
-Vocabulary Spaced Repetition
-    ↓
-Technical Subtests
-    ↓
-Full Simulation
+Repository
+Commit
+PR
+Issue
+Workflow Run
+File
+Line / Diff
 ```
 
-Suggested internal targets:
-
-- 85%+ practice accuracy in Math/Verbal;
-- 75%+ in technical areas;
-- 80+ percentile as an aspirational AFQT practice target.
-
-These are training goals, not official universal eligibility thresholds.
+when applicable.
 
 ---
 
-# 22. AFOQT Extension
+# 87. FACT vs INFERENCE
 
-Candidates interested in an officer-oriented pathway should use a separate **AFOQT preparation extension** rather than assuming that ASVAB is the principal exam for that path.
+```text
+GITHUB FACT
+Repository / issue / PR / workflow data
 
-The extension can include:
+JFXCMS FACT
+Course / assessment / learner data
 
-- verbal analogies;
-- arithmetic reasoning;
-- word knowledge;
-- math knowledge;
-- reading comprehension;
-- situational judgment;
-- aviation-related knowledge where applicable;
-- instrument comprehension;
-- table reading;
-- science.
+INFERENCE
+AI interpretation
 
-The exact required testing route and eligibility must be verified directly with current official recruiting guidance.
+RECOMMENDATION
+Suggested action
 
----
+GRADE
+Authorized educational decision
+```
 
-# 23. Weekly Integrated Schedule
-
-| Day | Block 1 | Block 2 | Block 3 |
-|---|---|---|---|
-| Monday | UNI/ASVAB Mathematics | Calculus / Linear Algebra | Programming |
-| Tuesday | Physics | NCEES E&C | English / Word Knowledge |
-| Wednesday | Algorithms / Discrete Math | Software / Systems | Reading Comprehension |
-| Thursday | Scientific Computing | AI / Statistics | Arithmetic Reasoning |
-| Friday | Chemistry / General Science | Networks / Architecture / OS | Electronics / Mechanics |
-| Saturday | 4h Mock Exam or Project | 2h Error Review | — |
-| Sunday | Spaced Review | Planning | Active Rest |
-
-Approximate workload: **22 hours/week**.
+AI inference must not silently become a grade.
 
 ---
 
-# 24. Error Analytics
+# 88. Event Model
 
-JFXCMS should maintain a structured **Error Log**.
+Recommended events:
 
-| Field | Purpose |
+```text
+RepositoryLinked
+IssueAssigned
+PullRequestOpened
+PullRequestReviewed
+PullRequestMerged
+WorkflowFailed
+WorkflowPassed
+SecurityFindingDetected
+SecurityFindingResolved
+ReleasePublished
+ContributionValidated
+```
+
+---
+
+# 89. Event-Driven Integration
+
+```text
+GitHub
+   ↓
+Webhook / Integration Layer
+   ↓
+Canonical Event
+   ↓
+JFXCMS Event Bus
+   ↓
+Learning Analytics
+Notifications
+Assessment
+Portfolio
+```
+
+MCP is ideal for agent interaction; webhooks/events are better for continuous synchronization.
+
+---
+
+# 90. MCP vs Webhook
+
+```text
+MCP
+→ interactive agent access
+
+Webhook
+→ event notification
+
+GitHub REST/GraphQL
+→ deterministic application integration
+
+Git
+→ source synchronization
+```
+
+Use each for its intended role.
+
+---
+
+# 91. Canonical GitHub Adapter
+
+```text
+JFXCMS Domain
+      ↓
+GitHub Integration Service
+      ├── MCP Client
+      ├── REST/GraphQL Adapter
+      ├── Webhook Receiver
+      └── Git Transport
+```
+
+---
+
+# 92. Why Not Use MCP for Everything
+
+MCP should not replace:
+
+- Git transport;
+- webhook event delivery;
+- high-volume synchronization;
+- deterministic CI integration.
+
+It should provide the AI/tool interaction plane.
+
+---
+
+# 93. Knowledge Plane vs Transaction Plane
+
+```text
+AI TOOL PLANE
+GitHub MCP
+     ↓
+Agent Context / Actions
+
+APPLICATION PLANE
+GitHub API / Webhooks
+     ↓
+Synchronization / Events
+
+SOURCE PLANE
+Git
+     ↓
+Code / History
+```
+
+---
+
+# 94. Repository Structure Extension
+
+```text
+jfxcms/
+├── README.md
+├── docs/
+│   ├── architecture/
+│   ├── github/
+│   │   ├── mcp.md
+│   │   ├── permissions.md
+│   │   ├── education-workflows.md
+│   │   ├── security.md
+│   │   └── assessment.md
+│   ├── devsecops/
+│   └── crowdsourcing/
+│
+├── integrations/
+│   └── github/
+│       ├── mcp/
+│       ├── api/
+│       ├── webhooks/
+│       └── git/
+│
+├── src/
+│   ├── agents/
+│   │   ├── tutor/
+│   │   ├── code/
+│   │   ├── review/
+│   │   ├── security/
+│   │   └── project/
+│   ├── assessment/
+│   ├── contests/
+│   └── analytics/
+│
+├── policies/
+│   ├── github-student.yaml
+│   ├── github-instructor.yaml
+│   └── github-maintainer.yaml
+│
+└── tests/
+    ├── github-mcp/
+    ├── github-api/
+    ├── security/
+    └── assessment/
+```
+
+---
+
+# 95. Recommended GitHub MCP Profiles
+
+## Student
+
+```text
+context
+repos
+issues
+pull_requests
+```
+
+Mode:
+
+```text
+read-only
+```
+
+except for explicitly authorized training repositories.
+
+---
+
+## Mentor
+
+```text
+context
+repos
+issues
+pull_requests
+discussions
+```
+
+---
+
+## Instructor
+
+```text
+context
+repos
+issues
+pull_requests
+actions
+projects
+discussions
+```
+
+---
+
+## Security Lab
+
+```text
+context
+repos
+code_security
+secret_protection
+dependabot
+security_advisories
+```
+
+---
+
+## Maintainer
+
+```text
+context
+repos
+issues
+pull_requests
+actions
+projects
+discussions
+notifications
+```
+
+Write actions still require policy checks.
+
+---
+
+# 96. MVP
+
+Recommended MVP:
+
+```text
+JFXCMS
+   ↓
+MCP Gateway
+   ↓
+Official GitHub MCP Server
+   ↓
+Training Repository
+```
+
+MVP capabilities:
+
+- repository inspection;
+- file retrieval;
+- issue reading;
+- PR reading;
+- code explanation;
+- assignment issue linking;
+- read-only tutor;
+- audit trail.
+
+---
+
+# 97. MVP Phase 2 — Contributions
+
+Add:
+
+- issue creation;
+- branch workflow;
+- pull-request creation;
+- instructor approval;
+- contribution portfolio.
+
+---
+
+# 98. MVP Phase 3 — GitHub Actions
+
+Add:
+
+- workflow inspection;
+- CI result ingestion;
+- failed-job explanations;
+- learning analytics.
+
+---
+
+# 99. MVP Phase 4 — Security
+
+Add:
+
+- code scanning;
+- Dependabot;
+- secret scanning;
+- remediation labs.
+
+---
+
+# 100. MVP Phase 5 — Crowdsourcing
+
+Add:
+
+- project decomposition;
+- volunteer issue assignment;
+- PR contribution scoring;
+- portfolio evidence.
+
+---
+
+# 101. MVP Phase 6 — Advanced Agents
+
+Add:
+
+```text
+Tutor Agent
+Code Agent
+Review Agent
+Security Agent
+Project Agent
+```
+
+All tools remain behind policies.
+
+---
+
+# 102. MVP Phase 7 — Multi-Platform SCM
+
+Add adapters for:
+
+```text
+GitHub
+GitLab
+Forgejo / Gitea
+```
+
+using a canonical SCM model.
+
+---
+
+# 103. Canonical SCM Model
+
+```yaml
+scm_repository:
+  id: repo_001
+  provider: github
+  owner: robotics-intelligent-systems
+  name: jfxcms
+  default_branch: main
+
+scm_change:
+  type: pull_request
+  external_id: 123
+  status: open
+```
+
+---
+
+# 104. Cross-Platform Principle
+
+JFXCMS should define:
+
+```text
+Repository
+Issue
+Change Request
+Review
+Pipeline
+Artifact
+Release
+Security Finding
+```
+
+as platform-neutral domain objects.
+
+---
+
+# 105. Recommended Technology Stack
+
+| Layer | Recommended Technology |
 |---|---|
-| Topic | Identify knowledge area |
-| Problem ID | Reproduce the exercise |
-| Error type | Conceptual / arithmetic / reading / time |
-| Root cause | Why the mistake occurred |
-| Correction | Required intervention |
-| Retest | +3 / +7 / +21 days |
-| Confidence | Learner self-assessment |
-| AI explanation | Optional generated feedback |
+| Learning Portal | JFXCMS Web UI |
+| Contest Engine | DOMjudge / DMOJ |
+| Problem Authoring | BAPCtools |
+| Crowdsourcing | PYBOSSA / BOINC |
+| Agent Framework | TaskWeaver / Deep Agents |
+| Automation | Activepieces |
+| Evaluation | EvalAI |
+| GitHub AI Integration | Official GitHub MCP Server |
+| Deterministic GitHub Integration | GitHub REST / GraphQL |
+| Events | GitHub Webhooks |
+| Source | Git |
+| CI | GitHub Actions / Jenkins / GitLab CI |
+| Security | GitHub Security + OWASP Glue |
+| Data | PostgreSQL |
+| RAG | Qdrant |
+| Containers | Docker |
+| Orchestration | Kubernetes / k3s |
 
-Core cycle:
+---
+
+# 106. Dependency Classification
+
+| Component | Role | Classification |
+|---|---|---|
+| GitHub MCP Server | AI-to-GitHub integration | External Official Integration |
+| GitHub API | Deterministic SCM integration | External Integration |
+| GitHub Webhooks | Event synchronization | External Integration |
+| Git | Source transport | Core |
+| MCP Gateway | Agent tool policy | Core |
+| TaskWeaver | Agent framework | Optional/Core Candidate |
+| Deep Agents | Agent framework | Optional |
+| PR-Agent | Specialized code review | Optional |
+| DOMjudge | Contest judge | Core Candidate |
+| DMOJ | Contest/learning platform | Core Candidate |
+| EvalAI | ML evaluation | Core Candidate |
+| PYBOSSA | Crowdsourcing | Core Candidate |
+| BOINC | Distributed computing | Optional |
+| Jenkins | CI | Optional |
+| GitLab | DevSecOps alternative | Optional |
+
+---
+
+# 107. GitHub MCP Dependency Record
+
+```yaml
+dependency:
+  name: GitHub MCP Server
+  source: https://github.com/github/github-mcp-server
+  owner: GitHub
+  remote_endpoint: https://api.githubcopilot.com/mcp/
+  local_image: ghcr.io/github/github-mcp-server
+  classification: External Official Integration
+  protocol: MCP
+  auth:
+    - OAuth
+    - Personal Access Token
+  default_toolsets:
+    - context
+    - repos
+    - issues
+    - pull_requests
+    - users
+```
+
+---
+
+# 108. Deployment Profile A — Remote MCP
+
+```text
+JFXCMS Agent
+   ↓
+Remote GitHub MCP
+   ↓
+GitHub
+```
+
+Best for:
+
+- simple deployment;
+- managed service;
+- desktop/IDE integration.
+
+---
+
+# 109. Deployment Profile B — Local MCP
+
+```text
+JFXCMS Agent
+   ↓
+Local Docker MCP
+   ↓
+GitHub API
+```
+
+Best for:
+
+- controlled labs;
+- reproducibility;
+- custom toolsets;
+- local policy enforcement.
+
+---
+
+# 110. Deployment Profile C — Hybrid
+
+```text
+JFXCMS
+ ├── Remote GitHub MCP
+ ├── GitHub API Adapter
+ ├── Webhooks
+ └── Git
+```
+
+Recommended for production.
+
+---
+
+# 111. Failure Mode — MCP Unavailable
+
+```text
+GitHub MCP unavailable
+       ↓
+AI tool interaction degraded
+       ↓
+Git/API/Webhook integration remains available
+```
+
+JFXCMS should continue core operation.
+
+---
+
+# 112. Failure Mode — GitHub API Unavailable
+
+```text
+API unavailable
+     ↓
+Retry / Circuit Breaker
+     ↓
+Queue events
+     ↓
+Operational Alert
+```
+
+Do not fabricate repository state.
+
+---
+
+# 113. Failure Mode — Agent Error
+
+```text
+Agent proposes wrong change
+        ↓
+Policy Layer
+        ↓
+Human Review
+        ↓
+Reject
+```
+
+---
+
+# 114. Observability
+
+Recommended metrics:
+
+```text
+github_mcp_request_count
+github_mcp_latency
+github_mcp_error_rate
+github_api_error_rate
+pr_review_latency
+ci_failure_rate
+issue_completion_time
+security_finding_resolution_time
+agent_write_approval_rate
+```
+
+---
+
+# 115. Auditability
+
+Every write should retain:
+
+```text
+User
+Agent
+Tool
+Repository
+Object
+Before/After
+Approval
+Timestamp
+```
+
+---
+
+# 116. CI/CD for JFXCMS Integration
+
+```text
+Commit
+ ↓
+Unit Tests
+ ↓
+MCP Contract Tests
+ ↓
+GitHub API Tests
+ ↓
+Policy Tests
+ ↓
+Security Tests
+ ↓
+Container Build
+ ↓
+SBOM
+ ↓
+Deploy
+```
+
+---
+
+# 117. Test Matrix
+
+## MCP Tests
+
+- connection;
+- auth;
+- tool discovery;
+- toolset restrictions;
+- read-only enforcement.
+
+## Repository Tests
+
+- file retrieval;
+- branch isolation;
+- permission boundaries.
+
+## PR Tests
+
+- diff retrieval;
+- review;
+- approval policies.
+
+## Actions Tests
+
+- workflow reading;
+- job logs;
+- failure interpretation.
+
+## Security Tests
+
+- token leakage;
+- overbroad scopes;
+- prohibited writes.
+
+---
+
+# 118. Governance
+
+The integration should enforce:
+
+- least privilege;
+- read-only by default;
+- scoped repository access;
+- explicit approval for high-impact writes;
+- complete audit logs;
+- separate student/instructor credentials;
+- academic integrity policies;
+- no hidden-test exposure;
+- no production-secret exposure.
+
+---
+
+# 119. Recommended Student Journey
 
 ```text
 Learn
   ↓
 Solve
   ↓
-Test
+Submit
   ↓
-Diagnose
+Receive Automated Feedback
+  ↓
+Open GitHub Issue / PR
+  ↓
+Collaborate
   ↓
 Review
   ↓
-Retest
-```
-
----
-
-# 25. Simulation & Contest Strategy
-
-## UNI
-
-- biweekly mock exams;
-- weekly exams during the final six weeks;
-- separate academic-aptitude, mathematics, physics and chemistry blocks.
-
-## NCEES
-
-Progression:
-
-```text
-20–25 problems
-     ↓
-55-problem block
-     ↓
-Full mock
-```
-
-## ASVAB
-
-- 10–20-question microtests;
-- weekly timed sections;
-- full simulation every two weeks during the final preparation phase.
-
-## Programming
-
-- weekly algorithm contest;
-- monthly full competitive-programming event;
-- progressive difficulty;
-- runtime/memory analysis;
-- post-contest editorial and AI review.
-
----
-
-# 26. Portfolio Program
-
-Every learner should finish at least four substantial projects.
-
-## Project 1 — Scientific Computing
-
-Example:
-
-**Numerical Simulation of a Dynamic System**
-
-Deliverables:
-
-- mathematical formulation;
-- numerical solver;
-- validation;
-- visualization;
-- report;
-- reproducible repository.
-
-## Project 2 — Software Engineering
-
-**Cloud-Native Distributed Application**
-
-Deliverables:
-
-- REST/OpenAPI;
-- database;
-- tests;
-- containers;
-- CI/CD;
-- observability;
-- architecture documentation.
-
-## Project 3 — Artificial Intelligence
-
-**RAG / AI Agent Research Prototype**
-
-Deliverables:
-
-- corpus;
-- embeddings;
-- retrieval;
-- local/cloud inference;
-- evaluation;
-- human-validation protocol.
-
-## Project 4 — Computer / Electrical Engineering
-
-Possible topics:
-
-- digital logic;
-- signals;
-- control;
-- networking;
-- computer architecture;
-- embedded simulation.
-
----
-
-# 27. Community & Volunteer Computing
-
-BOINC and PYBOSSA provide an opportunity to extend learning into collaborative projects.
-
-Examples:
-
-```text
-Scientific Simulation
-      ↓
-Task Generation
-      ↓
-BOINC Volunteer Compute
-      ↓
-Results
-      ↓
-Validation
-      ↓
-Student Analysis
-```
-
-or:
-
-```text
-Dataset / Research Question
-      ↓
-PYBOSSA Human Tasks
-      ↓
-Crowd Contributions
-      ↓
-Quality Control
-      ↓
-Research Dataset
-```
-
-This creates a bridge between education, citizen science, open-source contribution and research.
-
----
-
-# 28. Requirements Engineering
-
-The OpenReq and OSRMT references can support a requirements-driven learning and development workflow.
-
-```text
-Student / Project Need
-        ↓
-Requirements Capture
-        ↓
-Recommendation / Prioritization
-        ↓
-MBSE / Architecture
-        ↓
-Implementation
-        ↓
-Test / Contest / Simulation
-        ↓
-Evidence
-```
-
-This also aligns with the repository's MBSE-oriented engineering organization.
-
----
-
-# 29. AI Evaluation Laboratory
-
-Using EvalAI-style evaluation concepts:
-
-```text
-Dataset
-  +
-Metric
-  +
-Model / Agent
+Improve
   ↓
-Evaluation Job
+Build Portfolio
   ↓
-Score
-  ↓
-Leaderboard
-  ↓
-Error Analysis
-  ↓
-Model Improvement
-```
-
-Candidate laboratory tracks:
-
-- code generation;
-- mathematical reasoning;
-- scientific reasoning;
-- RAG;
-- agent tool use;
-- classification;
-- computer vision;
-- NLP;
-- robustness.
-
----
-
-# 30. Virtual Training Environment
-
-**Crucible** can be positioned as an optional virtual-training building block for controlled exercises.
-
-Potential use cases:
-
-- software-incident exercises;
-- DevSecOps laboratories;
-- systems troubleshooting;
-- contest environments;
-- engineering simulations;
-- team exercises.
-
----
-
-# 31. Sustainability & Social Impact
-
-**openLCA** can support a sustainability engineering track.
-
-Examples:
-
-- lifecycle analysis of computing infrastructure;
-- energy-use analysis;
-- cloud-vs-edge comparisons;
-- hardware lifecycle;
-- sustainable software engineering;
-- engineering design trade-offs.
-
-This gives the platform a multidisciplinary dimension beyond conventional programming contests.
-
----
-
-# 32. Blockchain & Decentralized Community Research
-
-The source references **Cosmos SDK** and **Superalgos**.
-
-These should be treated as optional research blocks rather than core learning-platform dependencies.
-
-Possible educational topics:
-
-- distributed consensus;
-- blockchain architecture;
-- tokenized incentive systems;
-- decentralized governance;
-- community-owned platforms;
-- social-trading systems;
-- distributed application design.
-
-No blockchain component is required for the core JFXCMS learning and contest platform.
-
----
-
-# 33. DevSecOps Architecture
-
-```text
-Git Repository
-     |
-     v
-GitLab
-     |
-     v
-CI Pipeline
-Jenkins
-     |
- +---+-------------------+
- |                       |
- v                       v
-Tests                OWASP Glue
- |                       |
- +-----------+-----------+
-             |
-             v
-        Build Artifact
-             |
-             v
-     Training / Contest /
-     Platform Deployment
-```
-
-This can be used both for the JFXCMS platform itself and for learner software projects.
-
----
-
-# 34. Recommended Logical Services
-
-```text
-identity-service
-learner-profile-service
-course-service
-problem-service
-contest-service
-submission-service
-judge-service
-assessment-service
-
-ai-tutor-service
-code-agent-service
-rag-service
-recommendation-service
-ai-evaluation-service
-
-crowdsourcing-service
-volunteer-compute-service
-community-project-service
-
-portfolio-service
-research-project-service
-requirements-service
-
-exam-prep-service
-uni-prep-service
-ncees-prep-service
-asvab-prep-service
-
-analytics-service
-error-log-service
-skill-model-service
-
-ci-integration-service
-security-evaluation-service
+Contribute to Open Source
 ```
 
 ---
 
-# 35. Suggested Repository Structure
+# 120. Recommended Volunteer Journey
 
 ```text
-jfxcms/
-├── README.md
-├── Computer Science/
-│   ├── algorithms/
-│   ├── data-structures/
-│   ├── programming/
-│   ├── systems/
-│   ├── software-engineering/
-│   ├── scientific-computing/
-│   └── artificial-intelligence/
-│
-├── curriculum/
-│   ├── uni-admission/
-│   ├── external-transfer/
-│   ├── graduate-preparation/
-│   ├── ncees-fe-electrical-computer/
-│   ├── asvab/
-│   └── afoqt/
-│
-├── contests/
-│   ├── problems/
-│   ├── bapctools/
-│   ├── domjudge/
-│   └── dmoj/
-│
-├── crowdsourcing/
-│   ├── pybossa/
-│   ├── boinc/
-│   └── community-projects/
-│
-├── ai/
-│   ├── tutors/
-│   ├── agents/
-│   ├── rag/
-│   ├── evaluation/
-│   └── recommendations/
-│
-├── labs/
-│   ├── scientific-computing/
-│   ├── software-engineering/
-│   ├── ai-evaluation/
-│   ├── security/
-│   ├── sustainability/
-│   └── distributed-computing/
-│
-├── MBSE/
-│   └── CAS/
-│       └── drawio/
-│
-├── docs/
-├── tests/
-└── deploy/
-```
-
----
-
-# 36. Development Roadmap
-
-## Phase 1 — Contest Foundation
-
-- problem repository;
-- DOMjudge / DMOJ evaluation;
-- CP Editor integration guidance;
-- problem metadata;
-- leaderboards.
-
-## Phase 2 — Learning Layer
-
-- course structure;
-- learner profile;
-- skill taxonomy;
-- error analytics;
-- spaced review.
-
-## Phase 3 — AI Tutor
-
-- TaskWeaver/agent experiments;
-- RAG;
-- code feedback;
-- personalized recommendations;
-- PR-Agent-style code review.
-
-## Phase 4 — Exam Preparation
-
-- UNI modules;
-- transfer-readiness tools;
-- NCEES FE E&C modules;
-- ASVAB modules;
-- optional AFOQT modules.
-
-## Phase 5 — Scientific Computing & AI
-
-- numerical laboratories;
-- HPC;
-- ML/DL;
-- EvalAI-style benchmarks;
-- advanced AI evaluation.
-
-## Phase 6 — Crowdsourcing
-
-- PYBOSSA;
-- BOINC;
-- community contribution;
-- open research tasks.
-
-## Phase 7 — DevSecOps
-
-- GitLab;
-- Jenkins;
-- OWASP Glue;
-- reproducible training environments.
-
-## Phase 8 — MBSE / Simulation
-
-- Arcadia/Capella;
-- architecture models;
-- CAS;
-- Crucible training environments;
-- end-to-end validation.
-
----
-
-# 37. Governance & Responsible AI
-
-AI-assisted learning should preserve:
-
-- human review;
-- explainability where practical;
-- transparent evaluation criteria;
-- provenance of learning materials;
-- academic-integrity controls;
-- reproducible scoring;
-- accessibility;
-- privacy;
-- auditability.
-
-The AI tutor should guide learning rather than simply provide contest answers during protected assessments.
-
-Recommended modes:
-
-```text
-LEARNING MODE
-Hints + explanations + examples
-
-PRACTICE MODE
-Limited hints + feedback
-
-CONTEST MODE
-No generative assistance unless contest rules allow it
-
-REVIEW MODE
-Full explanation after submission window
-```
-
----
-
-# 38. Intellectual Property and Open Design
-
-The project should continue to favor an:
-
-> **open, modular architecture designed to minimize proprietary lock-in and enable independent implementations.**
-
-Open-source availability does not automatically guarantee freedom from third-party patents, copyrights, trademarks, database rights, or other intellectual-property claims in every jurisdiction.
-
-Every incorporated project must retain its own license, attribution requirements, and upstream notices.
-
----
-
-# 39. Source-Project Intellectual Property Notice
-
-The original repository states that concept multimedia resources are references and are intended to be replaced by sufficiently simplified abstract models.
-
-It also states that authorship is not claimed over those external models and that permissions may be required for publication.
-
-This consolidated README does not alter those source-project notices.
-
----
-
-# 40. Disclaimer
-
-JFXCMS is an open-source educational, research and engineering concept.
-
-The integrated curriculum is a **preparation framework**, not an official curriculum or official preparation product of:
-
-- Universidad Nacional de Ingeniería;
-- NCEES;
-- the U.S. Department of Defense;
-- the U.S. Air Force;
-- the U.S. Air Force Reserve;
-- ASVAB;
-- AFOQT.
-
-Admission, transfer, graduate-study, licensure and military eligibility rules change and must be verified directly with the relevant institution or authority.
-
----
-
-# 41. Strategic Vision
-
-JFXCMS can evolve from a distributed programming-contest system into a broader open platform:
-
-```text
-PROGRAMMING CONTESTS
-        +
-CROWDSOURCING
-        +
-AI AGENTS
-        +
-SCIENTIFIC COMPUTING
-        +
-ENGINEERING EDUCATION
-        +
-EXAM PREPARATION
-        +
-OPEN RESEARCH
+Volunteer Joins Project
         ↓
-AI-POWERED COLLABORATIVE
-COMPUTATIONAL LEARNING ECOSYSTEM
+Skill Assessment
+        ↓
+Issue Recommendation
+        ↓
+Contribution
+        ↓
+CI / Review
+        ↓
+Validated Work
+        ↓
+Community Reputation
+        ↓
+Advanced Responsibility
 ```
-
-The central idea is to reuse the repository's original open-source ecosystem as **interoperable educational building blocks** instead of replacing its programming-contest and crowdsourcing roots.
 
 ---
 
-## Source Repositories
+# 121. Recommended Maintainer Journey
 
-- JFXCMS: `https://github.com/robotics-intelligent-systems/jfxcms`
-- Robotics Intelligent Systems: `https://github.com/robotics-intelligent-systems`
+```text
+Project Backlog
+      ↓
+AI Task Decomposition
+      ↓
+Issue Creation
+      ↓
+Contributor Matching
+      ↓
+PR Review
+      ↓
+CI/Security
+      ↓
+Merge
+      ↓
+Release
+```
 
+---
+
+# 122. Final Integrated Architecture
+
+```text
+┌──────────────────────────────────────────────────────────────┐
+│                           JFXCMS                             │
+│ Learning | Contests | Crowdsourcing | Engineering Education │
+└────────────────────────────┬─────────────────────────────────┘
+                             │
+                             ▼
+┌──────────────────────────────────────────────────────────────┐
+│                      AI ORCHESTRATOR                         │
+│ Tutor | Code | Review | Security | Project Agents           │
+└────────────────────────────┬─────────────────────────────────┘
+                             │
+                             ▼
+┌──────────────────────────────────────────────────────────────┐
+│                        MCP GATEWAY                           │
+│ Auth | Policies | Toolsets | Audit | Human Approval         │
+└────────────────────────────┬─────────────────────────────────┘
+                             │
+                             ▼
+┌──────────────────────────────────────────────────────────────┐
+│                OFFICIAL GITHUB MCP SERVER                    │
+│ context | repos | issues | PRs | actions | security         │
+└────────────────────────────┬─────────────────────────────────┘
+                             │
+                             ▼
+┌──────────────────────────────────────────────────────────────┐
+│                           GITHUB                             │
+│ Repos | Code | Issues | PRs | Actions | Security | Projects │
+└────────────────────────────┬─────────────────────────────────┘
+                             │
+         ┌───────────────────┼────────────────────┐
+         ▼                   ▼                    ▼
+   Learning Analytics    EvalAI / Judges    Portfolio
+```
+
+---
+
+# 123. Recommended Production Architecture
+
+The strongest architecture is not:
+
+```text
+JFXCMS → GitHub MCP → Everything
+```
+
+Instead:
+
+```text
+JFXCMS
+   ├── GitHub MCP
+   │      → interactive AI tools
+   │
+   ├── GitHub REST / GraphQL
+   │      → deterministic application integration
+   │
+   ├── GitHub Webhooks
+   │      → event synchronization
+   │
+   └── Git
+          → source code transport
+```
+
+Each integration mechanism has a distinct role.
+
+---
+
+# 124. Strategic Recommendation
+
+For JFXCMS, the official GitHub MCP server should become the preferred **agentic software-collaboration interface**.
+
+The initial production profile should enable:
+
+```text
+context
+repos
+issues
+pull_requests
+actions
+```
+
+with:
+
+```text
+read-only by default
++
+repository allowlists
++
+human approval for writes
+```
+
+Security-focused courses can additionally enable:
+
+```text
+code_security
+secret_protection
+dependabot
+security_advisories
+```
+
+---
+
+# 125. Key Design Principle
+
+> **Use GitHub MCP for intelligent, conversational engineering workflows; GitHub APIs and webhooks for deterministic application integration; Git for source control; and JFXCMS for learning, assessment, crowdsourcing, governance and analytics.**
+
+---
+
+# 126. Official References
+
+## JFXCMS
+
+- https://github.com/robotics-intelligent-systems/jfxcms
+
+## Official GitHub MCP Server
+
+- https://github.com/github/github-mcp-server
+
+## Remote GitHub MCP Endpoint
+
+- https://api.githubcopilot.com/mcp/
+
+## Local Docker Image
+
+- `ghcr.io/github/github-mcp-server`
+
+---
+
+# 127. Current Official Toolset Notes
+
+GitHub currently documents default toolsets:
+
+```text
+context
+repos
+issues
+pull_requests
+users
+```
+
+Additional toolsets include:
+
+```text
+actions
+code_quality
+code_security
+copilot
+dependabot
+discussions
+gists
+git
+governance
+labels
+notifications
+orgs
+projects
+secret_protection
+security_advisories
+stargazers
+```
+
+The exact tool surface may evolve.
+
+JFXCMS should discover current tools and validate permissions rather than hard-coding assumptions.
+
+---
+
+# 128. Disclaimer
+
+This document is an integration architecture proposal.
+
+GitHub MCP:
+
+- tool names;
+- toolsets;
+- authentication;
+- remote endpoint behavior;
+- OAuth scopes;
+- GitHub Enterprise support;
+- policies;
+- write capabilities;
+
+may evolve over time.
+
+Production deployments should verify the official GitHub MCP documentation and apply repository-specific security policies before enabling write-capable agents.
