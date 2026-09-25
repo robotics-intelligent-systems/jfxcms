@@ -1,4 +1,4 @@
-# JFXCMS — AI-Powered Crowdsourcing, Competitive Programming, Scientific Education & Admission Preparation Platform
+# JFXCMS — AI-Powered Crowdsourcing, Competitive Programming, Scientific Education, Simulation Officer & Admission Preparation Platform
 
 [![GitHub](https://img.shields.io/badge/GitHub-Open%20Source-blue)](https://github.com/robotics-intelligent-systems/jfxcms)
 [![Education](https://img.shields.io/badge/Education-STEM%20%7C%20Engineering-green)](https://github.com/robotics-intelligent-systems/jfxcms)
@@ -6,7 +6,7 @@
 [![Math](https://img.shields.io/badge/Mathematics-Pure%20%26%20Applied-orange)](https://github.com/robotics-intelligent-systems/jfxcms)
 [![MCP](https://img.shields.io/badge/MCP-GitHub-black)](https://github.com/github/github-mcp-server)
 
-> Open-source, modular platform for crowdsourcing, programming contests, collaborative development, admission-exam preparation, scientific computing, mathematics, AI-assisted learning, engineering education, graduate preparation, and research-oriented computational training.
+> Open-source, modular platform for crowdsourcing, programming contests, collaborative development, admission-exam preparation, scientific computing, mathematics, AI-assisted learning, simulation engineering, officer professional military education, graduate preparation, and research-oriented computational training.
 
 ---
 
@@ -15,6 +15,7 @@
 - [Description and Context](#description-and-context)
 - [Vision](#vision)
 - [Platform Architecture](#platform-architecture)
+- [Simulation Engineering & Officer Professional Military Education (PME) Track](#simulation-engineering--officer-professional-military-education-pme-track)
 - [Restored 48-Week Admission & Engineering Preparation Program](#restored-48-week-admission--engineering-preparation-program)
 - [Admission Examination Track](#admission-examination-track)
 - [Science Curriculum](#science-curriculum)
@@ -54,6 +55,7 @@ The project combines:
 - automated evaluation;
 - scientific computing;
 - engineering education;
+- simulation engineering & officer professional military education;
 - admission-exam preparation;
 - graduate-study preparation;
 - pure and applied mathematics;
@@ -75,6 +77,8 @@ COLLABORATIVE DEVELOPMENT
    +
 SCIENCE
    +
+SIMULATION & PME
+   +
 MATHEMATICS
    +
 AI
@@ -84,9 +88,6 @@ ECONOMIC MODELLING
 RESEARCH
         ↓
 OPEN COMPUTATIONAL EDUCATION ECOSYSTEM
-```
-
-This documentation structure is adapted from the support-and-usage organization of the BID digital-tools README template, without implying that JFXCMS is an official BID project or catalog entry.
 
 ---
 
@@ -98,6 +99,8 @@ JFXCMS evolves from a distributed programming-contest and crowdsourcing platform
 Pre-University Preparation
           ↓
 University STEM Foundation
+          ↓
+Simulation Engineering / PME
           ↓
 Scientific Computing
           ↓
@@ -130,16 +133,330 @@ Target users may include:
 
 ---
 
+# Simulation Engineering & Officer Professional Military Education (PME) Track
+
+This track merges the technical stack of **JFXCMS** (JavaFX, modular HMI panels, distributed architecture, real-time telemetry, and cloud integration) with the 5 progressive levels of U.S. Air Force Professional Military Education (PME).
+
+Plaintext
+
+```
+ [Level 1: Junior]       [Level 2: Captain]       [Level 3: Major]       [Level 4: Lt. Colonel]      [Level 5: Colonel]
+Dev & Control Systems -> Interfaces & HMI   -> Architecture & C4ISR -> Portfolio Management -> Vision & Strategy
+  (70% Tech / 30% Ops)   (50% Tech / 50% Ldr)   (40% Tech / 60% Str)   (30% Tech / 70% Mgmt)  (20% Tech / 80% Ldr)
+```
+
+## Level 1. Junior Officer / Engineer (0–4 Years)
+
+**Military Equivalent:** Second Lieutenant / First Lieutenant
+
+**JFXCMS Focus:** Base component development, telemetry rendering, and client-server communication.
+
+**Assimilation Ratio:** 70% Technical, 30% Operational.
+
+-   **Core Subjects:** Applied Mathematics, Probability & Statistics, Discrete & Continuous Simulation, Python, C++, Rust, Operating Systems, Networking, Software Architecture, System Control.
+    
+-   **JFXCMS Integration:**
+    
+    -   Implement GUI widgets in JavaFX for sensor and actuator telemetry.
+        
+    -   Program distributed communication routines (sockets/WebSockets) for real-time simulation data ingestion.
+        
+    -   Unit test automation and component validation for Human-Machine Interfaces (HMI).
+        
+-   **Expected Outcome:** Build functional JFXCMS panels, debug streaming telemetry, and ensure core system stability.
+    
+
+## Level 2. Captain
+
+**Military Equivalent:** Squadron Officer School (SOS)
+
+**JFXCMS Focus:** Human-in-the-Loop (HITL) simulation, modular interface design, and technical leadership.
+
+**Assimilation Ratio:** 50% Technical, 50% Leadership.
+
+-   **Core Subjects:** Technical Leadership, Team Management, Executive Communication, Agile Project Management, Risk Management, Requirements Engineering, Human-in-the-Loop (HITL).
+    
+-   **JFXCMS Integration:**
+    
+    -   Design command and control (C2) interfaces reducing operator cognitive load.
+        
+    -   Integrate Digital Twin modules connecting physical or synthetic systems with JFXCMS.
+        
+    -   Code review, branch management, and risk analysis for multi-developer simulation features.
+        
+-   **Expected Outcome:** Lead a small engineering squad developing JFXCMS modular workstations for synthetic training environments.
+    
+
+## Level 3. Major
+
+**Military Equivalent:** Air Command and Staff College (ACSC)
+
+**JFXCMS Focus:** Multi-domain C4ISR integration, wargaming, and AI-driven analytics.
+
+**Assimilation Ratio:** 40% Technical, 60% Strategic.
+
+-   **Core Subjects:** Operations Research, Complex Systems Theory, Mission Systems, C4ISR, Operational Modeling, Wargaming, Advanced Data Science, Machine Learning.
+    
+-   **JFXCMS Integration:**
+    
+    -   Evolve JFXCMS into a multi-domain operational dashboard displaying predictive battlefield or system analytics.
+        
+    -   Connect machine learning models to provide real-time decision support on screen.
+        
+    -   Support Distributed Interactive Simulation (DIS) / High Level Architecture (HLA) protocols within JavaFX components.
+        
+-   **Expected Outcome:** Architect a multi-disciplinary simulation ecosystem using JFXCMS as the primary visualization and control console for wargaming.
+    
+
+## Level 4. Lieutenant Colonel
+
+**Military Equivalent:** Command Preparation / Senior Staff
+
+**JFXCMS Focus:** Systems of Systems (SoS) architecture, enterprise digital transformation, and portfolio leadership.
+
+**Assimilation Ratio:** 30% Technical, 70% Management.
+
+-   **Core Subjects:** Enterprise Architecture, Capabilities Engineering, Portfolio Management, Systems of Systems, Digital Transformation, Applied Defense AI, Large-Scale Digital Twins.
+    
+-   **JFXCMS Integration:**
+    
+    -   Define software roadmap and integrate JFXCMS into broader enterprise capability portfolios.
+        
+    -   Cloud-native scaling of JFXCMS services on Kubernetes/Azure/AWS for multi-organization usage.
+        
+    -   Life-cycle cost estimation, open-source compliance, and legacy platform migration strategies.
+        
+-   **Expected Outcome:** Direct multi-million dollar simulation programs using JFXCMS as a scalable open-source foundation.
+    
+
+## Level 5. Colonel
+
+**Military Equivalent:** Air War College (AWC)
+
+**JFXCMS Focus:** Strategic technology foresight, defense policy, and institutional vision.
+
+**Assimilation Ratio:** 20% Technical, 80% Strategic Leadership.
+
+-   **Core Subjects:** Geopolitics, National Strategy, Technology Policy, Defense Innovation, Change Management, Strategic Intelligence, Air & Space Superiority.
+    
+-   **JFXCMS Integration:**
+    
+    -   Align simulation tools with strategic goals for air, space, and cyber domain readiness.
+        
+    -   Establish inter-agency and international open-source simulation standards.
+        
+    -   Institutional change management driving transition toward AI-assisted strategic command centers.
+        
+-   **Expected Outcome:** Formulate organizational strategy and long-term technological vision for next-generation simulation platforms.
+    
+
+## Simulation Officer Skill Distribution Model
+
+To reach the equivalent of a Technology & Simulation Colonel, the recommended knowledge distribution is:
+
+**Knowledge Area**
+
+**Weight**
+
+**Role in JFXCMS Integration**
+
+**Simulation & Modeling**
+
+**25%**
+
+Discrete/continuous models, physics engines, Digital Twins.
+
+**System Engineering (JFXCMS)**
+
+**20%**
+
+Software architecture, JavaFX HMI, network protocols, cloud.
+
+**AI & Data Analytics**
+
+**20%**
+
+Machine learning, predictive analytics, decision support.
+
+**Leadership & Management**
+
+**15%**
+
+Agile management, team leadership, capability portfolios.
+
+**Military Operations & C4ISR**
+
+**10%**
+
+Tactical C2, wargaming, operational domain awareness.
+
+**Strategy & Geopolitics**
+
+**10%**
+
+Technology foresight, defense innovation, strategic vision\[cite: 2\].
+
+# Restored 48-Week Admission & Engineering Preparation Program
+
+This section restores the earlier JFXCMS integrated preparation program and extends it with additional science and postgraduate mathematics tracks.
+
+**Recommended duration:** 48 weeks
+
+**Recommended workload:** 18–24 hours/week
+
+Plaintext
+
+```
+DIAGNOSTIC
+    ↓
+MATHEMATICS + SCIENCE + ENGLISH
+    ↓
+ADMISSION PREPARATION
+    ↓
+UNIVERSITY MATHEMATICS
+    ↓
+COMPUTER SCIENCE & SYSTEMS
+    ↓
+SCIENTIFIC COMPUTING & SIMULATION
+    ↓
+ARTIFICIAL INTELLIGENCE
+    ↓
+ADVANCED MATHEMATICS / ECONOMIC MODELS
+```
+
+## Phase 0 — Diagnostic Assessment
+
+**Weeks 1–2**
+
+Assess: arithmetic, algebra, geometry, trigonometry, precalculus, mathematical reasoning, physics, chemistry, biology fundamentals, scientific reasoning, English vocabulary and reading, programming, algorithms, discrete mathematics, computer architecture, operating systems, networks, databases.
+
+## Phase I — Mathematics Foundations
+
+**Weeks 3–10**
+
+-   **Arithmetic:** integers, real numbers, fractions, ratios, percentages, rates, unit conversions.
+    
+-   **Algebra:** expressions, factoring, equations, inequalities, systems, functions, logarithms, matrices.
+    
+-   **Geometry:** triangles, polygons, circles, analytic geometry, 3D geometry.
+    
+-   **Trigonometry:** ratios, identities, equations, sine/cosine laws, vectors.
+    
+-   **Precalculus:** functions, domain/range, sequences, intuitive limits.
+    
+
+# Admission Examination Track
+
+## Phase II — University Admission / External Transfer
+
+**Weeks 11–18**
+
+-   **Academic Aptitude:** mathematical reasoning, logic, reading comprehension, verbal reasoning.
+    
+-   **Humanities:** language, literature, history, geography, economics, philosophy.
+    
+-   **Mathematics:** arithmetic, algebra, geometry, trigonometry, functions, combinatorics, probability.
+    
+-   **Physics:** kinematics, dynamics, energy, momentum, fluids, thermodynamics, electricity, magnetism, optics, modern physics.
+    
+-   **Chemistry:** atomic structure, bonding, stoichiometry, gases, solutions, equilibrium, organic chemistry.
+    
+
+# Science Curriculum
+
+## Science Foundation
+
+-   **Scientific Method & Measurement:** uncertainty, dimensional analysis, error propagation.
+    
+-   **Physics I–IV:** Classical Mechanics, Electricity & Magnetism, Thermodynamics, Waves & Modern Physics.
+    
+-   **Chemistry I–II:** General, Physical & Materials Chemistry.
+    
+-   **Biology & Computational Biology:** cellular biology, genetics, systems biology, bioinformatics.
+    
+-   **Earth & Environment:** atmosphere, climate, energy systems, resource modelling.
+    
+
+# University Mathematics & Scientific Computing
+
+## Phase III — University Mathematics
+
+**Weeks 19–26**
+
+-   **Calculus:** limits, differentiation, integration, multivariable calculus, Jacobians, Hessians.
+    
+-   **Linear Algebra:** matrices, vector spaces, eigenvalues/eigenvectors, SVD, least squares.
+    
+-   **Differential Equations:** ODEs, systems of ODEs, stability, introductory PDEs.
+    
+-   **Probability & Statistics:** random variables, distributions, Bayesian reasoning, regression.
+    
+-   **Optimization:** constrained/unconstrained optimization, Lagrange multipliers, gradient methods.
+    
+
+## Scientific Computing Core
+
+**Weeks 39–42**
+
+Floating-point arithmetic, root finding, numerical integration/differentiation, ODE/PDE solvers, parallel computing (OpenMP, MPI, GPU CUDA).
+
+# Computer Science & Engineering Core
+
+## Phase IV — Computer Science & Systems
+
+**Weeks 27–34**
+
+-   **Programming:** Python, C, C++, Rust, Java.
+    
+-   **Data Structures & Algorithms:** asymptotic complexity, trees, graphs, dynamic programming.
+    
+-   **Systems:** architecture, operating systems, processes, memory hierarchy, networking (TCP/IP, HTTP), databases (SQL, PostgreSQL).
+    
+
+## Phase V — Software Engineering
+
+**Weeks 35–38**
+
+Requirements engineering, UML/SysML, software architecture, SOLID, REST/OpenAPI, CI/CD, DevSecOps, Docker, Kubernetes, observability.
+
+# Artificial Intelligence Track
+
+## Phase VI — Artificial Intelligence
+
+**Weeks 43–46**
+
+-   **Machine Learning & Deep Learning:** regression, trees, neural networks, backpropagation, CNNs, Transformers.
+    
+-   **Generative AI & Agents:** RAG, vector databases, AI agents, Model Context Protocol (MCP).
+    
+
+# Postgraduate Mathematics for AI & Economic Models
+
+## Proposed Postgraduate Research Track
+
+Duration: 4 semesters / 18–24 months.
+
+-   **Semester 1:** Real Analysis I, Advanced Linear Algebra, Abstract Algebra, Proof & Logic.
+    
+-   **Semester 2:** Measure Theory, Probability Theory, Functional Analysis, Topology & Geometry.
+    
+-   **Semester 3:** Convex Analysis, Dynamical Systems, PDEs, Stochastic Processes\[cite: 3\].
+    
+-   **Semester 4:** Statistical Learning Theory, Information Geometry, Optimal Transport, Game Theory, Econometrics\[cite: 3\].
+    
+
+---
+
 # Platform Architecture
 
 ```text
-                           USERS
-      Students | Teachers | Researchers | Contributors
+USERS
+      Students | Teachers | Researchers | Officers | Contributors
                              │
                              ▼
 ┌──────────────────────────────────────────────────────────────┐
 │                    JFXCMS LEARNING PORTAL                    │
-│ Courses | Exams | Problems | Contests | Labs | Portfolio    │
+│ Courses | Exams | Problems | Contests | Labs | Portfolio     │
 └─────────────────────────────┬────────────────────────────────┘
                               │
                               ▼
@@ -152,20 +469,20 @@ Target users may include:
        ▼                      ▼                      ▼
 ┌───────────────┐     ┌────────────────┐      ┌────────────────┐
 │ EXAM ENGINE   │     │ CONTEST ENGINE │      │ LAB / RESEARCH │
-│ Diagnostics  │     │ DOMjudge / DMOJ│      │ SciComp / AI   │
-│ Mock Exams   │     │ BAPCtools      │      │ Math / Econ    │
+│ Diagnostics   │     │ DOMjudge / DMOJ│      │ SciComp / AI   │
+│ Mock Exams    │     │ BAPCtools      │      │ Simulation/PME │
 └───────┬───────┘     └───────┬────────┘      └───────┬────────┘
         └─────────────────────┼─────────────────────────┘
                               ▼
 ┌──────────────────────────────────────────────────────────────┐
 │                EVALUATION & ANALYTICS                        │
-│ Tests | Benchmarks | Error Log | Skill Graph | EvalAI       │
+│ Tests | Benchmarks | Error Log | Skill Graph | EvalAI        │
 └─────────────────────────────┬────────────────────────────────┘
                               ▼
 ┌──────────────────────────────────────────────────────────────┐
 │                  COLLABORATIVE ENGINEERING                   │
-│ GitHub MCP | Issues | PRs | Actions | Portfolio Evidence    │
-└──────────────────────────────────────────────────────────────┘
+│ GitHub MCP | Issues | PRs | Actions | Portfolio Evidence     │
+└─────────────────────────────┘
 ```
 
 ---
@@ -1395,6 +1712,40 @@ Possible themes:
 
 ---
 
+# Economic Modelling & Computational Economics
+
+Integration of formal mathematical models with agent-based and macroeconomic simulations\[cite: 3\].
+
+# Competitive Programming & Collaborative Development
+
+Integration of BAPCtools, DOMjudge, DMOJ, and issue-driven open-source contribution flows\[cite: 3\].
+
+# GitHub MCP Integration
+
+Supports official GitHub MCP integration via Copilot endpoints (`https://api.githubcopilot.com/mcp/`) for agentic collaboration\[cite: 3\].
+
+# Assessment & Learning Analytics
+
+Includes automated Error Log tracking, adaptive diagnostic testing, and spaced repetition\[cite: 3\].
+
+# Portfolio & Research Program
+
+Substantial deliverables across Scientific Computing, Software Engineering, AI Prototypes, and Economic Simulations\[cite: 3\].
+
+# User Guide
+
+Tailored workflows for Admission Students, Scientific Computing Students, Simulation Engineers, AI Researchers, and Postgraduate Mathematics Students\[cite: 3\].
+
+# Installation Guide
+
+Docker-based deployment containing JFXCMS Portal, Contest Engines (DOMjudge), PostgreSQL, Python scientific runtime, and GitHub MCP integrations\[cite: 3\].
+
+# Dependencies
+
+Includes frameworks like TaskWeaver, OpenReq, Docker, Kubernetes, DOMjudge, PyBOSSA, Jupyter, NumPy, and SymPy\[cite: 3\].
+
+---
+
 # Graduate Research Preparation
 
 Every advanced learner should produce a research proposal containing:
@@ -1614,6 +1965,11 @@ jfxcms/
 │   ├── computational-economics/
 │   ├── agent-based-models/
 │   └── financial-mathematics/
+|
+├── simulation/
+│   ├── hmi-panels/
+│   ├── digital-twins/
+│   └── c4isr-wargaming/
 │
 ├── contests/
 │   ├── problems/
@@ -1655,6 +2011,9 @@ jfxcms/
 ---
 
 # Roadmap
+
+Phases 1 through 9 covering Contest Engine, Admission Restoration, Simulation/PME Track, Collaborative Engineering, Scientific Computing, AI, Postgraduate Mathematics, Economic Models, and Research\[cite: 3\].
+
 
 ## Phase 1 — Contest Foundation
 
@@ -1858,7 +2217,7 @@ This README does not assign a license that is not already established by the rep
 
 # Disclaimer
 
-JFXCMS is an open-source educational, research, and engineering architecture.
+JFXCMS is an open educational and computational framework\[cite: 3\]. Military PME equivalents serve as a competency mapping model and do not constitute an official military commission or degree.
 
 The admission and examination curricula are preparation frameworks, not official syllabi unless explicitly mapped to a current official institutional source.
 
