@@ -298,6 +298,7 @@ Technology foresight, defense innovation, strategic vision\[cite: 2\].
 
 ## Condensed Roadmap for a Simulation Engineer
 
+```text
 Phase 1
 Mathematics + Programming + Simulation
 ↓
@@ -312,7 +313,7 @@ Enterprise Architecture + Strategic Management
 ↓
 Phase 5
 Geopolitics + Strategy + Technological Innovation
-
+```
 
 If the goal is to reach a level comparable to that of a colonel specializing in technology and simulation, the ideal distribution of knowledge would be:
 
