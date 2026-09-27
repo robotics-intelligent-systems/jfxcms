@@ -136,15 +136,31 @@ Target users may include:
 
 # Simulation Engineering & Officer Professional Military Education (PME) Track
 
-This track merges the technical stack of **JFXCMS** (JavaFX, modular HMI panels, distributed architecture, real-time telemetry, and cloud integration) with the 5 progressive levels of U.S. Air Force Professional Military Education (PME).
+This track maps the technical stack of **JFXCMS** (JavaFX, modular HMI panels,
+distributed architecture, real-time telemetry and cloud integration) to five
+progressive learning levels inspired by U.S. Air Force Professional Military
+Education (PME).
 
-Plaintext
+## Track Progression
 
+```mermaid
+flowchart TD
+    L1["Level 1: Junior Officer / Engineer"] --> L2["Level 2: Captain"]
+    L2 --> L3["Level 3: Major"]
+    L3 --> L4["Level 4: Lieutenant Colonel"]
+    L4 --> L5["Level 5: Colonel"]
 ```
- [Level 1: Junior]       [Level 2: Captain]       [Level 3: Major]       [Level 4: Lt. Colonel]      [Level 5: Colonel]
-Dev & Control Systems -> Interfaces & HMI   -> Architecture & C4ISR -> Portfolio Management -> Vision & Strategy
-  (70% Tech / 30% Ops)   (50% Tech / 50% Ldr)   (40% Tech / 60% Str)   (30% Tech / 70% Mgmt)  (20% Tech / 80% Ldr)
-```
+
+| Level | Engineering focus | Technical share | Complementary share |
+| --- | --- | ---: | --- |
+| 1. Junior Officer / Engineer | Development and control systems | 70% | 30% Operational |
+| 2. Captain | Interfaces and HMI | 50% | 50% Leadership |
+| 3. Major | Architecture and C4ISR | 40% | 60% Strategic |
+| 4. Lieutenant Colonel | Portfolio management | 30% | 70% Management |
+| 5. Colonel | Vision and strategy | 20% | 80% Strategic Leadership |
+
+The levels and ratios describe this project's educational competency mapping,
+not an official military commission or degree.
 
 ## Level 1. Junior Officer / Engineer (0–4 Years)
 
@@ -154,18 +170,15 @@ Dev & Control Systems -> Interfaces & HMI   -> Architecture & C4ISR -> Portfolio
 
 **Assimilation Ratio:** 70% Technical, 30% Operational.
 
--   **Core Subjects:** Applied Mathematics, Probability & Statistics, Discrete & Continuous Simulation, Python, C++, Rust, Operating Systems, Networking, Software Architecture, System Control.
-    
--   **JFXCMS Integration:**
-    
-    -   Implement GUI widgets in JavaFX for sensor and actuator telemetry.
-        
-    -   Program distributed communication routines (sockets/WebSockets) for real-time simulation data ingestion.
-        
-    -   Unit test automation and component validation for Human-Machine Interfaces (HMI).
-        
--   **Expected Outcome:** Build functional JFXCMS panels, debug streaming telemetry, and ensure core system stability.
-    
+**Core Subjects:** Applied Mathematics, Probability & Statistics, Discrete & Continuous Simulation, Python, C++, Rust, Operating Systems, Networking, Software Architecture, System Control.
+
+**JFXCMS Integration:**
+
+- Implement GUI widgets in JavaFX for sensor and actuator telemetry.
+- Program distributed communication routines (sockets/WebSockets) for real-time simulation data ingestion.
+- Unit test automation and component validation for Human-Machine Interfaces (HMI).
+
+**Expected Outcome:** Build functional JFXCMS panels, debug streaming telemetry, and ensure core system stability.
 
 ## Level 2. Captain
 
@@ -175,18 +188,15 @@ Dev & Control Systems -> Interfaces & HMI   -> Architecture & C4ISR -> Portfolio
 
 **Assimilation Ratio:** 50% Technical, 50% Leadership.
 
--   **Core Subjects:** Technical Leadership, Team Management, Executive Communication, Agile Project Management, Risk Management, Requirements Engineering, Human-in-the-Loop (HITL).
-    
--   **JFXCMS Integration:**
-    
-    -   Design command and control (C2) interfaces reducing operator cognitive load.
-        
-    -   Integrate Digital Twin modules connecting physical or synthetic systems with JFXCMS.
-        
-    -   Code review, branch management, and risk analysis for multi-developer simulation features.
-        
--   **Expected Outcome:** Lead a small engineering squad developing JFXCMS modular workstations for synthetic training environments.
-    
+**Core Subjects:** Technical Leadership, Team Management, Executive Communication, Agile Project Management, Risk Management, Requirements Engineering, Human-in-the-Loop (HITL).
+
+**JFXCMS Integration:**
+
+- Design command and control (C2) interfaces reducing operator cognitive load.
+- Integrate Digital Twin modules connecting physical or synthetic systems with JFXCMS.
+- Code review, branch management, and risk analysis for multi-developer simulation features.
+
+**Expected Outcome:** Lead a small engineering squad developing JFXCMS modular workstations for synthetic training environments.
 
 ## Level 3. Major
 
@@ -196,18 +206,15 @@ Dev & Control Systems -> Interfaces & HMI   -> Architecture & C4ISR -> Portfolio
 
 **Assimilation Ratio:** 40% Technical, 60% Strategic.
 
--   **Core Subjects:** Operations Research, Complex Systems Theory, Mission Systems, C4ISR, Operational Modeling, Wargaming, Advanced Data Science, Machine Learning.
-    
--   **JFXCMS Integration:**
-    
-    -   Evolve JFXCMS into a multi-domain operational dashboard displaying predictive battlefield or system analytics.
-        
-    -   Connect machine learning models to provide real-time decision support on screen.
-        
-    -   Support Distributed Interactive Simulation (DIS) / High Level Architecture (HLA) protocols within JavaFX components.
-        
--   **Expected Outcome:** Architect a multi-disciplinary simulation ecosystem using JFXCMS as the primary visualization and control console for wargaming.
-    
+**Core Subjects:** Operations Research, Complex Systems Theory, Mission Systems, C4ISR, Operational Modeling, Wargaming, Advanced Data Science, Machine Learning.
+
+**JFXCMS Integration:**
+
+- Evolve JFXCMS into a multi-domain operational dashboard displaying predictive battlefield or system analytics.
+- Connect machine learning models to provide real-time decision support on screen.
+- Support Distributed Interactive Simulation (DIS) / High Level Architecture (HLA) protocols within JavaFX components.
+
+**Expected Outcome:** Architect a multi-disciplinary simulation ecosystem using JFXCMS as the primary visualization and control console for wargaming.
 
 ## Level 4. Lieutenant Colonel
 
@@ -217,18 +224,15 @@ Dev & Control Systems -> Interfaces & HMI   -> Architecture & C4ISR -> Portfolio
 
 **Assimilation Ratio:** 30% Technical, 70% Management.
 
--   **Core Subjects:** Enterprise Architecture, Capabilities Engineering, Portfolio Management, Systems of Systems, Digital Transformation, Applied Defense AI, Large-Scale Digital Twins.
-    
--   **JFXCMS Integration:**
-    
-    -   Define software roadmap and integrate JFXCMS into broader enterprise capability portfolios.
-        
-    -   Cloud-native scaling of JFXCMS services on Kubernetes/Azure/AWS for multi-organization usage.
-        
-    -   Life-cycle cost estimation, open-source compliance, and legacy platform migration strategies.
-        
--   **Expected Outcome:** Direct multi-million dollar simulation programs using JFXCMS as a scalable open-source foundation.
-    
+**Core Subjects:** Enterprise Architecture, Capabilities Engineering, Portfolio Management, Systems of Systems, Digital Transformation, Applied Defense AI, Large-Scale Digital Twins.
+
+**JFXCMS Integration:**
+
+- Define software roadmap and integrate JFXCMS into broader enterprise capability portfolios.
+- Cloud-native scaling of JFXCMS services on Kubernetes/Azure/AWS for multi-organization usage.
+- Life-cycle cost estimation, open-source compliance, and legacy platform migration strategies.
+
+**Expected Outcome:** Direct multi-million dollar simulation programs using JFXCMS as a scalable open-source foundation.
 
 ## Level 5. Colonel
 
@@ -238,94 +242,57 @@ Dev & Control Systems -> Interfaces & HMI   -> Architecture & C4ISR -> Portfolio
 
 **Assimilation Ratio:** 20% Technical, 80% Strategic Leadership.
 
--   **Core Subjects:** Geopolitics, National Strategy, Technology Policy, Defense Innovation, Change Management, Strategic Intelligence, Air & Space Superiority.
-    
--   **JFXCMS Integration:**
-    
-    -   Align simulation tools with strategic goals for air, space, and cyber domain readiness.
-        
-    -   Establish inter-agency and international open-source simulation standards.
-        
-    -   Institutional change management driving transition toward AI-assisted strategic command centers.
-        
--   **Expected Outcome:** Formulate organizational strategy and long-term technological vision for next-generation simulation platforms.
-    
+**Core Subjects:** Geopolitics, National Strategy, Technology Policy, Defense Innovation, Change Management, Strategic Intelligence, Air & Space Superiority.
+
+**JFXCMS Integration:**
+
+- Align simulation tools with strategic goals for air, space, and cyber domain readiness.
+- Establish inter-agency and international open-source simulation standards.
+- Institutional change management driving transition toward AI-assisted strategic command centers.
+
+**Expected Outcome:** Formulate organizational strategy and long-term technological vision for next-generation simulation platforms.
 
 ## Simulation Officer Skill Distribution Model
 
-To reach the equivalent of a Technology & Simulation Colonel, the recommended knowledge distribution is:
+The proposed knowledge distribution for the advanced technology and simulation
+profile is:
 
-**Knowledge Area**
+| Knowledge area | Weight | Role in JFXCMS integration |
+| --- | ---: | --- |
+| Simulation & Modeling | 25% | Discrete/continuous models, physics engines and Digital Twins |
+| System Engineering (JFXCMS) | 20% | Software architecture, JavaFX HMI, network protocols and cloud |
+| AI & Data Analytics | 20% | Machine learning, predictive analytics and decision support |
+| Leadership & Management | 15% | Agile management, team leadership and capability portfolios |
+| Military Operations & C4ISR | 10% | Tactical C2, wargaming and operational domain awareness |
+| Strategy & Geopolitics | 10% | Technology foresight, defense innovation and strategic vision |
+| **Total** | **100%** | |
 
-**Weight**
-
-**Role in JFXCMS Integration**
-
-**Simulation & Modeling**
-
-**25%**
-
-Discrete/continuous models, physics engines, Digital Twins.
-
-**System Engineering (JFXCMS)**
-
-**20%**
-
-Software architecture, JavaFX HMI, network protocols, cloud.
-
-**AI & Data Analytics**
-
-**20%**
-
-Machine learning, predictive analytics, decision support.
-
-**Leadership & Management**
-
-**15%**
-
-Agile management, team leadership, capability portfolios.
-
-**Military Operations & C4ISR**
-
-**10%**
-
-Tactical C2, wargaming, operational domain awareness.
-
-**Strategy & Geopolitics**
-
-**10%**
-
-Technology foresight, defense innovation, strategic vision\[cite: 2\].
+These weights describe the overall knowledge mix. The technical/complementary
+ratios above describe the emphasis at each level; they are separate measures.
 
 ## Condensed Roadmap for a Simulation Engineer
 
-```text
-Phase 1
-Mathematics + Programming + Simulation
-↓
-Phase 2
-Systems Engineering + Leadership
-↓
-Phase 3
-Operations Research + AI + Wargaming
-↓
-Phase 4
-Enterprise Architecture + Strategic Management
-↓
-Phase 5
-Geopolitics + Strategy + Technological Innovation
+```mermaid
+flowchart TD
+    P1["Phase 1: Technical foundations"] --> P2["Phase 2: Systems and leadership"]
+    P2 --> P3["Phase 3: Research and analytics"]
+    P3 --> P4["Phase 4: Enterprise architecture"]
+    P4 --> P5["Phase 5: Strategy and innovation"]
 ```
 
-If the goal is to reach a level comparable to that of a colonel specializing in technology and simulation, the ideal distribution of knowledge would be:
+| Phase | Learning focus |
+| --- | --- |
+| 1 | Mathematics, programming and simulation |
+| 2 | Systems engineering and leadership |
+| 3 | Operations research, AI and wargaming |
+| 4 | Enterprise architecture and strategic management |
+| 5 | Geopolitics, strategy and technological innovation |
 
-25% simulation and modeling.
-20% AI and data analysis.
-20% systems engineering.
-15% leadership and management.
-10% military operations and security.
-10% strategy and geopolitics.
+The roadmap moves from technical foundations toward leadership and strategy.
+Use the skill distribution table above as the single reference for the overall
+knowledge mix.
 
-This combination closely reflects the career progression of an Air Force officer: from technical expert to operational leader and, finally, to strategist.
+---
 
 # Restored 48-Week Admission & Engineering Preparation Program
 
