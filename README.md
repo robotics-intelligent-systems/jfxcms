@@ -29,6 +29,7 @@
 - [Assessment & Learning Analytics](#assessment--learning-analytics)
 - [Portfolio & Research Program](#portfolio--research-program)
 - [User Guide](#user-guide)
+- [Supplemental Documentation Index](docs/README.md)
 - [Installation Guide](#installation-guide)
 - [Dependencies](#dependencies)
 - [Recommended Repository Structure](#recommended-repository-structure)
@@ -1733,6 +1734,8 @@ Substantial deliverables across Scientific Computing, Software Engineering, AI P
 # User Guide
 
 Tailored workflows for Admission Students, Scientific Computing Students, Simulation Engineers, AI Researchers, and Postgraduate Mathematics Students\[cite: 3\].
+
+See the [supplemental documentation index](docs/README.md) for the [Senior AI and Backend Interview Preparation guide](docs/senior-ai-backend-interview-preparation.md).
 
 # Installation Guide
 
